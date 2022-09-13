@@ -1,0 +1,9 @@
+# git ignore this type of file
+.ipynb_checkpoints/
+.idea/
+.cache/
+.local/
+.config/
+.ipython
+.bash_history
+.python_history
