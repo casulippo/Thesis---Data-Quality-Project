@@ -3,27 +3,27 @@
   "meta": {
     "active_batch_definition": {
       "batch_identifiers": {},
-      "data_asset_name": "scraping_all_20230225",
+      "data_asset_name": "scraping_all_20230224",
       "data_connector_name": "all",
       "datasource_name": "glassdoor_scraping"
     },
     "batch_markers": {
-      "ge_load_time": "20230226T214932.024729Z",
-      "pandas_data_fingerprint": "eee5d0e7cb97c1f9c357a8740321667f"
+      "ge_load_time": "20230226T220753.443787Z",
+      "pandas_data_fingerprint": "253de439815b5e9911c08d2c80af6798"
     },
     "batch_spec": {
-      "path": "/home/jovyan/great_expectations/../data/scraping_all_20230225.csv"
+      "path": "/home/jovyan/great_expectations/../data/scraping_all_20230224.csv"
     },
     "checkpoint_id": null,
-    "checkpoint_name": "checkpoint_20230225",
+    "checkpoint_name": "checkpoint_20230224",
     "expectation_suite_name": "Main",
     "great_expectations_version": "0.15.48",
     "run_id": {
-      "run_name": "20230226-214932-scraping_all_20230225",
-      "run_time": "2023-02-26T21:49:32.001074+00:00"
+      "run_name": "20230226-220753-scraping_all_20230224",
+      "run_time": "2023-02-26T22:07:53.421770+00:00"
     },
     "validation_id": null,
-    "validation_time": "20230226T214932.311324Z"
+    "validation_time": "20230226T220753.544005Z"
   },
   "results": [
     {
@@ -35,7 +35,7 @@
       "expectation_config": {
         "expectation_type": "expect_table_columns_to_match_ordered_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column_list": [
             "company",
             "job_title",
@@ -210,7 +210,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company",
           "type_list": [
             "str"
@@ -220,7 +220,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -242,14 +242,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -267,7 +267,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_title",
           "type_list": [
             "str"
@@ -277,8 +277,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 2424,
+        "element_count": 8160,
+        "missing_count": 606,
         "missing_percent": 7.426470588235294,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -299,14 +299,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_title"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -357,7 +357,7 @@
           null,
           null
         ],
-        "unexpected_count": 2424,
+        "unexpected_count": 606,
         "unexpected_percent": 7.426470588235294
       },
       "success": false
@@ -371,14 +371,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "location"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -396,7 +396,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "location",
           "type_list": [
             "str"
@@ -406,7 +406,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -428,14 +428,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company_rating"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -562,7 +562,7 @@
           null,
           null
         ],
-        "unexpected_count": 23880,
+        "unexpected_count": 5970,
         "unexpected_percent": 73.16176470588235
       },
       "success": false
@@ -576,7 +576,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company_rating",
           "type_list": [
             "float"
@@ -599,7 +599,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company_rating",
           "min_value": 0
         },
@@ -620,7 +620,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "company_rating",
           "max_value": 5.0,
           "min_value": 0.0
@@ -629,8 +629,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 23880,
+        "element_count": 8160,
+        "missing_count": 5970,
         "missing_percent": 73.16176470588235,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -651,14 +651,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_age"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -676,7 +676,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_age",
           "type_list": [
             "str"
@@ -686,7 +686,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -708,14 +708,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_link"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -733,7 +733,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "job_link",
           "type_list": [
             "str"
@@ -743,7 +743,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -765,14 +765,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "oppurtunita_carriera"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -899,7 +899,7 @@
           null,
           null
         ],
-        "unexpected_count": 24584,
+        "unexpected_count": 6146,
         "unexpected_percent": 75.31862745098039
       },
       "success": false
@@ -913,7 +913,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "oppurtunita_carriera",
           "type_list": [
             "float"
@@ -936,7 +936,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "oppurtunita_carriera",
           "min_value": 0
         },
@@ -957,7 +957,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "oppurtunita_carriera",
           "max_value": 5.0,
           "min_value": 0.0
@@ -966,8 +966,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 24584,
+        "element_count": 8160,
+        "missing_count": 6146,
         "missing_percent": 75.31862745098039,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -988,14 +988,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "stipendio_e_benefit"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1122,7 +1122,7 @@
           null,
           null
         ],
-        "unexpected_count": 24584,
+        "unexpected_count": 6146,
         "unexpected_percent": 75.31862745098039
       },
       "success": false
@@ -1136,7 +1136,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "stipendio_e_benefit",
           "type_list": [
             "float"
@@ -1159,7 +1159,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "stipendio_e_benefit",
           "min_value": 0
         },
@@ -1180,7 +1180,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "stipendio_e_benefit",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1189,8 +1189,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 24584,
+        "element_count": 8160,
+        "missing_count": 6146,
         "missing_percent": 75.31862745098039,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -1211,14 +1211,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "cultura_e_valori"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1345,7 +1345,7 @@
           null,
           null
         ],
-        "unexpected_count": 24584,
+        "unexpected_count": 6146,
         "unexpected_percent": 75.31862745098039
       },
       "success": false
@@ -1359,7 +1359,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "cultura_e_valori",
           "type_list": [
             "float"
@@ -1382,7 +1382,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "cultura_e_valori",
           "min_value": 0
         },
@@ -1403,7 +1403,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "cultura_e_valori",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1412,8 +1412,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 24584,
+        "element_count": 8160,
+        "missing_count": 6146,
         "missing_percent": 75.31862745098039,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -1434,14 +1434,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dirigenti_senior"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1568,7 +1568,7 @@
           null,
           null
         ],
-        "unexpected_count": 24584,
+        "unexpected_count": 6146,
         "unexpected_percent": 75.31862745098039
       },
       "success": false
@@ -1582,7 +1582,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dirigenti_senior",
           "type_list": [
             "float"
@@ -1605,7 +1605,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dirigenti_senior",
           "min_value": 0
         },
@@ -1626,7 +1626,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dirigenti_senior",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1635,8 +1635,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 24584,
+        "element_count": 8160,
+        "missing_count": 6146,
         "missing_percent": 75.31862745098039,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -1657,14 +1657,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "equilibrio_lavoro_vita_privata"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1791,7 +1791,7 @@
           null,
           null
         ],
-        "unexpected_count": 24584,
+        "unexpected_count": 6146,
         "unexpected_percent": 75.31862745098039
       },
       "success": false
@@ -1805,7 +1805,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "equilibrio_lavoro_vita_privata",
           "type_list": [
             "float"
@@ -1828,7 +1828,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "equilibrio_lavoro_vita_privata",
           "min_value": 0
         },
@@ -1849,7 +1849,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "equilibrio_lavoro_vita_privata",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1858,8 +1858,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 24584,
+        "element_count": 8160,
+        "missing_count": 6146,
         "missing_percent": 75.31862745098039,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -1880,14 +1880,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "sede_centrale"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -1938,7 +1938,7 @@
           null,
           null
         ],
-        "unexpected_count": 23912,
+        "unexpected_count": 5978,
         "unexpected_percent": 73.25980392156862
       },
       "success": false
@@ -1952,7 +1952,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "sede_centrale",
           "type_list": [
             "str"
@@ -1962,8 +1962,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 23912,
+        "element_count": 8160,
+        "missing_count": 5978,
         "missing_percent": 73.25980392156862,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -1984,14 +1984,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dimensioni"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2042,7 +2042,7 @@
           null,
           null
         ],
-        "unexpected_count": 23888,
+        "unexpected_count": 5972,
         "unexpected_percent": 73.18627450980392
       },
       "success": false
@@ -2056,7 +2056,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "dimensioni",
           "type_list": [
             "str"
@@ -2066,8 +2066,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 23888,
+        "element_count": 8160,
+        "missing_count": 5972,
         "missing_percent": 73.18627450980392,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -2088,14 +2088,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "fondata_nel"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -2222,7 +2222,7 @@
           null,
           null
         ],
-        "unexpected_count": 12672,
+        "unexpected_count": 3168,
         "unexpected_percent": 38.82352941176471
       },
       "success": false
@@ -2236,7 +2236,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_match_regex",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "fondata_nel",
           "regex": "[0-9]{4}"
         },
@@ -2244,12 +2244,12 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 12672,
+        "element_count": 8160,
+        "missing_count": 3168,
         "missing_percent": 38.82352941176471,
         "partial_unexpected_counts": [
           {
-            "count": 20,
+            "count": 8,
             "value": 0.0
           }
         ],
@@ -2261,19 +2261,7 @@
           5460,
           7260,
           7261,
-          7262,
-          9540,
-          11340,
-          11341,
-          11342,
-          13620,
-          15420,
-          15421,
-          15422,
-          17700,
-          19500,
-          19501,
-          19502
+          7262
         ],
         "partial_unexpected_list": [
           0.0,
@@ -2283,21 +2271,9 @@
           0.0,
           0.0,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
           0.0
         ],
-        "unexpected_count": 32,
+        "unexpected_count": 8,
         "unexpected_percent": 0.16025641025641024,
         "unexpected_percent_nonmissing": 0.16025641025641024,
         "unexpected_percent_total": 0.09803921568627451
@@ -2313,14 +2289,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "tipo"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2371,7 +2347,7 @@
           null,
           null
         ],
-        "unexpected_count": 23888,
+        "unexpected_count": 5972,
         "unexpected_percent": 73.18627450980392
       },
       "success": false
@@ -2385,7 +2361,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "tipo",
           "type_list": [
             "str"
@@ -2395,8 +2371,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 23888,
+        "element_count": 8160,
+        "missing_count": 5972,
         "missing_percent": 73.18627450980392,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -2417,14 +2393,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "settore"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2475,7 +2451,7 @@
           null,
           null
         ],
-        "unexpected_count": 26976,
+        "unexpected_count": 6744,
         "unexpected_percent": 82.6470588235294
       },
       "success": false
@@ -2489,7 +2465,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "settore",
           "type_list": [
             "str"
@@ -2499,8 +2475,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 26976,
+        "element_count": 8160,
+        "missing_count": 6744,
         "missing_percent": 82.6470588235294,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -2521,14 +2497,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "segmento"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2579,7 +2555,7 @@
           null,
           null
         ],
-        "unexpected_count": 26976,
+        "unexpected_count": 6744,
         "unexpected_percent": 82.6470588235294
       },
       "success": false
@@ -2593,7 +2569,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "segmento",
           "type_list": [
             "str"
@@ -2603,8 +2579,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 26976,
+        "element_count": 8160,
+        "missing_count": 6744,
         "missing_percent": 82.6470588235294,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
@@ -2625,14 +2601,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "entrate"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
+        "element_count": 8160,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2683,7 +2659,7 @@
           null,
           null
         ],
-        "unexpected_count": 23888,
+        "unexpected_count": 5972,
         "unexpected_percent": 73.18627450980392
       },
       "success": false
@@ -2697,7 +2673,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "44443cc4de44ba37642b43bd85f3a657",
+          "batch_id": "4d7cdc08e0ee331cce276f99b1b7442b",
           "column": "entrate",
           "type_list": [
             "str"
@@ -2707,8 +2683,8 @@
       },
       "meta": {},
       "result": {
-        "element_count": 32640,
-        "missing_count": 23888,
+        "element_count": 8160,
+        "missing_count": 5972,
         "missing_percent": 73.18627450980392,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],

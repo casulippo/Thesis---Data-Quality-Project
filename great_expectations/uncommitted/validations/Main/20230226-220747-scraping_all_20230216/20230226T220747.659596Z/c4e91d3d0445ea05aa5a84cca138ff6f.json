@@ -3,27 +3,27 @@
   "meta": {
     "active_batch_definition": {
       "batch_identifiers": {},
-      "data_asset_name": "scraping_all_20230219",
+      "data_asset_name": "scraping_all_20230216",
       "data_connector_name": "all",
       "datasource_name": "glassdoor_scraping"
     },
     "batch_markers": {
-      "ge_load_time": "20230226T214927.722319Z",
-      "pandas_data_fingerprint": "b8e0a4c683dc7924b1a407742592824f"
+      "ge_load_time": "20230226T220747.690091Z",
+      "pandas_data_fingerprint": "7d25c4fb76415b94ee41cbdeba9f0dd9"
     },
     "batch_spec": {
-      "path": "/home/jovyan/great_expectations/../data/scraping_all_20230219.csv"
+      "path": "/home/jovyan/great_expectations/../data/scraping_all_20230216.csv"
     },
     "checkpoint_id": null,
-    "checkpoint_name": "checkpoint_20230219",
+    "checkpoint_name": "checkpoint_20230216",
     "expectation_suite_name": "Main",
     "great_expectations_version": "0.15.48",
     "run_id": {
-      "run_name": "20230226-214927-scraping_all_20230219",
-      "run_time": "2023-02-26T21:49:27.699892+00:00"
+      "run_name": "20230226-220747-scraping_all_20230216",
+      "run_time": "2023-02-26T22:07:47.659596+00:00"
     },
     "validation_id": null,
-    "validation_time": "20230226T214927.784485Z"
+    "validation_time": "20230226T220747.730557Z"
   },
   "results": [
     {
@@ -35,7 +35,7 @@
       "expectation_config": {
         "expectation_type": "expect_table_columns_to_match_ordered_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column_list": [
             "company",
             "job_title",
@@ -210,7 +210,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company",
           "type_list": [
             "str"
@@ -220,7 +220,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -242,14 +242,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -267,7 +267,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_title",
           "type_list": [
             "str"
@@ -277,9 +277,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 303,
-        "missing_percent": 7.426470588235294,
+        "element_count": 1380,
+        "missing_count": 105,
+        "missing_percent": 7.608695652173914,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -299,14 +299,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_title"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -357,8 +357,8 @@
           null,
           null
         ],
-        "unexpected_count": 303,
-        "unexpected_percent": 7.426470588235294
+        "unexpected_count": 105,
+        "unexpected_percent": 7.608695652173914
       },
       "success": false
     },
@@ -371,14 +371,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "location"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -396,7 +396,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "location",
           "type_list": [
             "str"
@@ -406,7 +406,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -428,14 +428,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company_rating"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -562,8 +562,8 @@
           null,
           null
         ],
-        "unexpected_count": 2985,
-        "unexpected_percent": 73.16176470588235
+        "unexpected_count": 730,
+        "unexpected_percent": 52.89855072463768
       },
       "success": false
     },
@@ -576,7 +576,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company_rating",
           "type_list": [
             "float"
@@ -599,7 +599,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company_rating",
           "min_value": 0
         },
@@ -620,7 +620,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "company_rating",
           "max_value": 5.0,
           "min_value": 0.0
@@ -629,9 +629,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 2985,
-        "missing_percent": 73.16176470588235,
+        "element_count": 1380,
+        "missing_count": 730,
+        "missing_percent": 52.89855072463768,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -651,14 +651,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_age"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -676,7 +676,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_age",
           "type_list": [
             "str"
@@ -686,7 +686,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -708,14 +708,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_link"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -733,7 +733,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "job_link",
           "type_list": [
             "str"
@@ -743,7 +743,7 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "missing_count": 0,
         "missing_percent": 0.0,
         "partial_unexpected_counts": [],
@@ -765,14 +765,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "oppurtunita_carriera"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -899,8 +899,8 @@
           null,
           null
         ],
-        "unexpected_count": 3073,
-        "unexpected_percent": 75.31862745098039
+        "unexpected_count": 1001,
+        "unexpected_percent": 72.53623188405797
       },
       "success": false
     },
@@ -913,7 +913,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "oppurtunita_carriera",
           "type_list": [
             "float"
@@ -936,7 +936,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "oppurtunita_carriera",
           "min_value": 0
         },
@@ -957,7 +957,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "oppurtunita_carriera",
           "max_value": 5.0,
           "min_value": 0.0
@@ -966,9 +966,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3073,
-        "missing_percent": 75.31862745098039,
+        "element_count": 1380,
+        "missing_count": 1001,
+        "missing_percent": 72.53623188405797,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -988,14 +988,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "stipendio_e_benefit"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1122,8 +1122,8 @@
           null,
           null
         ],
-        "unexpected_count": 3073,
-        "unexpected_percent": 75.31862745098039
+        "unexpected_count": 1001,
+        "unexpected_percent": 72.53623188405797
       },
       "success": false
     },
@@ -1136,7 +1136,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "stipendio_e_benefit",
           "type_list": [
             "float"
@@ -1159,7 +1159,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "stipendio_e_benefit",
           "min_value": 0
         },
@@ -1180,7 +1180,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "stipendio_e_benefit",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1189,9 +1189,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3073,
-        "missing_percent": 75.31862745098039,
+        "element_count": 1380,
+        "missing_count": 1001,
+        "missing_percent": 72.53623188405797,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -1211,14 +1211,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "cultura_e_valori"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1345,8 +1345,8 @@
           null,
           null
         ],
-        "unexpected_count": 3073,
-        "unexpected_percent": 75.31862745098039
+        "unexpected_count": 1001,
+        "unexpected_percent": 72.53623188405797
       },
       "success": false
     },
@@ -1359,7 +1359,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "cultura_e_valori",
           "type_list": [
             "float"
@@ -1382,7 +1382,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "cultura_e_valori",
           "min_value": 0
         },
@@ -1403,7 +1403,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "cultura_e_valori",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1412,9 +1412,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3073,
-        "missing_percent": 75.31862745098039,
+        "element_count": 1380,
+        "missing_count": 1001,
+        "missing_percent": 72.53623188405797,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -1434,14 +1434,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dirigenti_senior"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1568,8 +1568,8 @@
           null,
           null
         ],
-        "unexpected_count": 3073,
-        "unexpected_percent": 75.31862745098039
+        "unexpected_count": 1001,
+        "unexpected_percent": 72.53623188405797
       },
       "success": false
     },
@@ -1582,7 +1582,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dirigenti_senior",
           "type_list": [
             "float"
@@ -1605,7 +1605,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dirigenti_senior",
           "min_value": 0
         },
@@ -1626,7 +1626,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dirigenti_senior",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1635,9 +1635,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3073,
-        "missing_percent": 75.31862745098039,
+        "element_count": 1380,
+        "missing_count": 1001,
+        "missing_percent": 72.53623188405797,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -1657,14 +1657,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "equilibrio_lavoro_vita_privata"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -1791,8 +1791,8 @@
           null,
           null
         ],
-        "unexpected_count": 3073,
-        "unexpected_percent": 75.31862745098039
+        "unexpected_count": 1001,
+        "unexpected_percent": 72.53623188405797
       },
       "success": false
     },
@@ -1805,7 +1805,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "equilibrio_lavoro_vita_privata",
           "type_list": [
             "float"
@@ -1828,7 +1828,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_min_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "equilibrio_lavoro_vita_privata",
           "min_value": 0
         },
@@ -1849,7 +1849,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_between",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "equilibrio_lavoro_vita_privata",
           "max_value": 5.0,
           "min_value": 0.0
@@ -1858,9 +1858,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3073,
-        "missing_percent": 75.31862745098039,
+        "element_count": 1380,
+        "missing_count": 1001,
+        "missing_percent": 72.53623188405797,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -1880,14 +1880,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "sede_centrale"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -1938,8 +1938,8 @@
           null,
           null
         ],
-        "unexpected_count": 2989,
-        "unexpected_percent": 73.25980392156862
+        "unexpected_count": 954,
+        "unexpected_percent": 69.1304347826087
       },
       "success": false
     },
@@ -1952,7 +1952,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "sede_centrale",
           "type_list": [
             "str"
@@ -1962,9 +1962,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 2989,
-        "missing_percent": 73.25980392156862,
+        "element_count": 1380,
+        "missing_count": 954,
+        "missing_percent": 69.1304347826087,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -1984,14 +1984,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dimensioni"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2042,8 +2042,8 @@
           null,
           null
         ],
-        "unexpected_count": 2986,
-        "unexpected_percent": 73.18627450980392
+        "unexpected_count": 954,
+        "unexpected_percent": 69.1304347826087
       },
       "success": false
     },
@@ -2056,7 +2056,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "dimensioni",
           "type_list": [
             "str"
@@ -2066,9 +2066,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 2986,
-        "missing_percent": 73.18627450980392,
+        "element_count": 1380,
+        "missing_count": 954,
+        "missing_percent": 69.1304347826087,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -2088,14 +2088,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "fondata_nel"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 1,
@@ -2222,8 +2222,8 @@
           null,
           null
         ],
-        "unexpected_count": 1584,
-        "unexpected_percent": 38.82352941176471
+        "unexpected_count": 792,
+        "unexpected_percent": 57.391304347826086
       },
       "success": false
     },
@@ -2236,7 +2236,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_match_regex",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "fondata_nel",
           "regex": "[0-9]{4}"
         },
@@ -2244,33 +2244,18 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 1584,
-        "missing_percent": 38.82352941176471,
-        "partial_unexpected_counts": [
-          {
-            "count": 4,
-            "value": 0.0
-          }
-        ],
-        "partial_unexpected_index_list": [
-          1380,
-          3180,
-          3181,
-          3182
-        ],
-        "partial_unexpected_list": [
-          0.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        "unexpected_count": 4,
-        "unexpected_percent": 0.16025641025641024,
-        "unexpected_percent_nonmissing": 0.16025641025641024,
-        "unexpected_percent_total": 0.09803921568627451
+        "element_count": 1380,
+        "missing_count": 792,
+        "missing_percent": 57.391304347826086,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
       },
-      "success": false
+      "success": true
     },
     {
       "exception_info": {
@@ -2281,14 +2266,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "tipo"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2339,8 +2324,8 @@
           null,
           null
         ],
-        "unexpected_count": 2986,
-        "unexpected_percent": 73.18627450980392
+        "unexpected_count": 954,
+        "unexpected_percent": 69.1304347826087
       },
       "success": false
     },
@@ -2353,7 +2338,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "tipo",
           "type_list": [
             "str"
@@ -2363,9 +2348,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 2986,
-        "missing_percent": 73.18627450980392,
+        "element_count": 1380,
+        "missing_count": 954,
+        "missing_percent": 69.1304347826087,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -2385,14 +2370,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "settore"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2443,8 +2428,8 @@
           null,
           null
         ],
-        "unexpected_count": 3372,
-        "unexpected_percent": 82.6470588235294
+        "unexpected_count": 1196,
+        "unexpected_percent": 86.66666666666667
       },
       "success": false
     },
@@ -2457,7 +2442,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "settore",
           "type_list": [
             "str"
@@ -2467,9 +2452,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3372,
-        "missing_percent": 82.6470588235294,
+        "element_count": 1380,
+        "missing_count": 1196,
+        "missing_percent": 86.66666666666667,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -2489,14 +2474,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "segmento"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2547,8 +2532,8 @@
           null,
           null
         ],
-        "unexpected_count": 3372,
-        "unexpected_percent": 82.6470588235294
+        "unexpected_count": 1196,
+        "unexpected_percent": 86.66666666666667
       },
       "success": false
     },
@@ -2561,7 +2546,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "segmento",
           "type_list": [
             "str"
@@ -2571,9 +2556,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 3372,
-        "missing_percent": 82.6470588235294,
+        "element_count": 1380,
+        "missing_count": 1196,
+        "missing_percent": 86.66666666666667,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -2593,14 +2578,14 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_not_be_null",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "entrate"
         },
         "meta": {}
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
+        "element_count": 1380,
         "partial_unexpected_counts": [
           {
             "count": 20,
@@ -2651,8 +2636,8 @@
           null,
           null
         ],
-        "unexpected_count": 2986,
-        "unexpected_percent": 73.18627450980392
+        "unexpected_count": 954,
+        "unexpected_percent": 69.1304347826087
       },
       "success": false
     },
@@ -2665,7 +2650,7 @@
       "expectation_config": {
         "expectation_type": "expect_column_values_to_be_in_type_list",
         "kwargs": {
-          "batch_id": "e9bd252c14835612b1e4ae4a3ac712c0",
+          "batch_id": "c4e91d3d0445ea05aa5a84cca138ff6f",
           "column": "entrate",
           "type_list": [
             "str"
@@ -2675,9 +2660,9 @@
       },
       "meta": {},
       "result": {
-        "element_count": 4080,
-        "missing_count": 2986,
-        "missing_percent": 73.18627450980392,
+        "element_count": 1380,
+        "missing_count": 954,
+        "missing_percent": 69.1304347826087,
         "partial_unexpected_counts": [],
         "partial_unexpected_index_list": [],
         "partial_unexpected_list": [],
@@ -2691,9 +2676,9 @@
   ],
   "statistics": {
     "evaluated_expectations": 49,
-    "success_percent": 67.3469387755102,
-    "successful_expectations": 33,
-    "unsuccessful_expectations": 16
+    "success_percent": 69.38775510204081,
+    "successful_expectations": 34,
+    "unsuccessful_expectations": 15
   },
   "success": false
 }

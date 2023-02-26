@@ -17,6 +17,7 @@ def run_dataq(expectation_suite_name='Main'):
     expectation_suite_name = 'Main'
     path = '../data'
     regex = r'scraping_all_[0-9]{8}'
+    print('Questa la documentazione sulla suite:',expectation_suite_name, '\n', 'http://localhost:9000/view/great_expectations/uncommitted/data_docs/local_site/expectations/'+ expectation_suite_name +'.html')
     for e in os.listdir(path):
         if re.match(regex, e):
             file_path = path + '/' + e
