@@ -3,57 +3,6 @@
   "expectation_suite_name": "Main",
   "expectations": [
     {
-      "expectation_type": "expect_table_columns_to_match_ordered_list",
-      "kwargs": {
-        "column_list": [
-          "company",
-          "job_title",
-          "location",
-          "company_rating",
-          "job_age",
-          "job_link",
-          "Sede centrale",
-          "Dimensioni",
-          "Fondata nel",
-          "Tipo",
-          "Entrate",
-          "Opportunit\u00e0 di carriera",
-          "Stipendio e benefit",
-          "Cultura e valori",
-          "Dirigenti senior",
-          "Equilibrio lavoro/vita privata",
-          "Settore",
-          "Segmento"
-        ]
-      },
-      "meta": {
-        "notes": {
-          "content": "",
-          "format": "markdown"
-        }
-      }
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_in_type_list",
-      "kwargs": {
-        "column": "company",
-        "type_list": [
-          "str"
-        ]
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_in_type_list",
-      "kwargs": {
-        "column": "job_title",
-        "type_list": [
-          "str"
-        ]
-      },
-      "meta": {}
-    },
-    {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "company"
@@ -92,6 +41,13 @@
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "job_link"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "run_date"
       },
       "meta": {}
     },
@@ -147,14 +103,21 @@
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "fondata_nel"
+        "column": "tipo"
       },
       "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "tipo"
+        "column": "entrate"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "fondata_nel"
       },
       "meta": {}
     },
@@ -175,7 +138,27 @@
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "entrate"
+        "column": "scraping_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "company",
+        "type_list": [
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "job_title",
+        "type_list": [
+          "str"
+        ]
       },
       "meta": {}
     },
@@ -193,6 +176,16 @@
       "expectation_type": "expect_column_values_to_be_in_type_list",
       "kwargs": {
         "column": "job_age",
+        "type_list": [
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "scraping_date",
         "type_list": [
           "str"
         ]
@@ -265,6 +258,16 @@
         "column": "entrate",
         "type_list": [
           "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "fondata_nel",
+        "type_list": [
+          "int"
         ]
       },
       "meta": {}
@@ -436,6 +439,22 @@
       "kwargs": {
         "column": "fondata_nel",
         "regex": "[0-9]{4}"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_strftime_format",
+      "kwargs": {
+        "column": "scraping_date",
+        "strftime_format": "%Y-%m-%d"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "job_link",
+        "regex": "^https://www\\.glassdoor\\.it/job-listing/.*"
       },
       "meta": {}
     }

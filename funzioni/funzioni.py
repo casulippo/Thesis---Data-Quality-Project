@@ -21,7 +21,6 @@ def run_dataq(expectation_suite_name='Main'):
     for e in os.listdir(path):
         if re.match(regex, e):
             file_path = path + '/' + e
-           # print(file_path)
             my_checkpoint_name = 'checkpoint_' + e[13:-4]
             data_asset_name = e[:-4]
             yaml_config = f"""
@@ -53,8 +52,6 @@ def parse_json():
     import pandas as pd
     sys.path.append('../../')
     path = "../great_expectations/uncommitted/validations/Main"
-    #egex1 = r"/(\d{8})-"
-    #craping_date=[]
     expectation_type=[]
     dataframe_type=[]
     expectation_type=[]
@@ -309,31 +306,17 @@ def parse_json():
     df_expectations = pd.DataFrame() 
 
     df_expectations['column'] = column
-    #df_expectations['column_list'] = column_list
     df_expectations['expectation_type']=expectation_type
     df_expectations['element_count'] = element_count
     df_expectations['missing_count'] = missing_count
     df_expectations['missing_percent'] = missing_percent
-    #df_expectations['partial_unexpected_counts'] = partial_unexpected_counts
-    #df_expectations['partial_unexpected_index_list'] = partial_unexpected_index_list
-    #df_expectations['partial_unexpected_list'] = partial_unexpected_list
     df_expectations['unexpected_count'] = unexpected_count
     df_expectations['unexpected_percent'] = unexpected_percent
     df_expectations['unexpected_percent_nonmissing'] = unexpected_percent_nonmissing
     df_expectations['unexpected_percent_total'] = unexpected_percent_total
     df_expectations['dataframe_type']=dataframe_type
     df_expectations['timestamp_run_quality']=timestamp_run
-
-    #df_expectations['success']=success
-    #f_expectations['date_run_quality']=timestamp_run[0:8]
-
-    #f_expectations['scraping_date']=scraping_date
-
-    #f_expectations['scraping_date'] = pd.to_datetime(df_expectations['scraping_date'], format='%Y%m%d').dt.strftime('%Y-%m-%d')
     df_expectations['scraping_date']= pd.to_datetime(df_expectations['dataframe_type'].str[13:], format='%Y%m%d').dt.strftime('%Y-%m-%d')
 
     df_expectations = df_expectations[['scraping_date'] + ['dataframe_type'] + ['timestamp_run_quality']+ [ col for col in df_expectations.columns if (col != 'dataframe_type')|(col != 'timestamp_run_quality')] ]
     return df_expectations.drop_duplicates().reset_index(drop=True)
-    #return df_expectations
-
-
