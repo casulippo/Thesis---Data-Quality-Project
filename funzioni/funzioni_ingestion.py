@@ -153,7 +153,7 @@ def scraping_job_page(base_url , n_page=None) :
     driver.quit ()
     end_time = time.time ()
     print ('Done!')
-    print ('Total pages scraped:' , n_page , '\n')
+    #print ('Total pages scraped:' , n_page , '\n')
     print ("Runtime:" , round (end_time - start_time) , "seconds" + '\nTime sleep:' , time_sleep , 'seconds')
 
     return df_append
