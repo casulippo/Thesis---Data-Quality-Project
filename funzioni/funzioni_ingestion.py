@@ -111,11 +111,12 @@ def scraping_job_page(base_url , n_page=None) :
     driver = webdriver.Chrome (r"C:\Users\Casulippo\Desktop\web_chromedriver\chromedriver.exe")
     # base_url = 'https://www.glassdoor.it/Lavoro/amsterdam-paesi-bassi-lavori-SRCH_IL.0,21_IC3064478.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=&typedLocation=Amsterdam%2520(Paesi%2520Bassi)&context=Jobs&dropdown=0'
     driver.get (base_url)
+    driver.maximize_window()
     a = np.random.choice ([x for x in range (3 , 5)])
     time_sleep = time_sleep + a
     time.sleep (a)
     url = driver.current_url
-    # driver.maximize_window()
+    
     allow_cookies (driver)
     a = np.random.choice ([x for x in range (3 , 5)])
     time_sleep = time_sleep + a
@@ -262,4 +263,18 @@ def scraping_company_page(links , end_n_page=None , start_n_page=None) :
     end_time = time.time ()
     print ('Total pages scraped:' , len (links) , '\n')
     print ("Runtime:" , round (end_time - start_time) , "seconds" + '\nTime sleep: ' , time_sleep , 'seconds')
+    df_append_2 = df_append_2.rename(columns={'Sede centrale':'sede_centrale',
+                                    'Dimensioni':'dimensioni',
+                                    'Fondata nel' : 'fondata_nel',
+                                    'Tipo':'tipo',
+                                    'Entrate':'entrate',
+                                    # job_link
+                                    'Opportunità di carriera': 'oppurtunita_carriera',
+                                    'Stipendio e benefit':'stipendio_e_benefit',
+                                    'Cultura e valori':'cultura_e_valori',
+                                    'Dirigenti senior':'dirigenti_senior',
+                                    'Equilibrio lavoro/vita privata':'equilibrio_lavoro_vita_privata',
+                                    'Settore':'settore',
+                                    'Segmento':'segmento'})
+
     return df_append_2
