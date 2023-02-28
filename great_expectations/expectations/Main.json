@@ -47,13 +47,6 @@
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "run_date"
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_values_to_not_be_null",
-      "kwargs": {
         "column": "oppurtunita_carriera"
       },
       "meta": {}
@@ -336,7 +329,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "company_rating",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -344,7 +337,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "oppurtunita_carriera",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -352,7 +345,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "stipendio_e_benefit",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -360,7 +353,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "cultura_e_valori",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -368,7 +361,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "dirigenti_senior",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -376,7 +369,7 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "equilibrio_lavoro_vita_privata",
-        "min_value": 0
+        "min_value": 0.0
       },
       "meta": {}
     },
@@ -443,6 +436,14 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "fondata_nel",
+        "min_value": 1000
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_values_to_match_strftime_format",
       "kwargs": {
         "column": "scraping_date",
@@ -455,6 +456,75 @@
       "kwargs": {
         "column": "job_link",
         "regex": "^https://www\\.glassdoor\\.it/job-listing/.*"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "company",
+        "regex": "^[A-Z].*$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "location",
+        "regex": "^[A-Z].*$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "dimensioni",
+        "value_set": [
+          "Oltre 10.000 dipendenti",
+          "Da 201 a 500 dipendenti",
+          "Da 51 a 200 dipendenti",
+          "Sconosciuto",
+          "Da 1 a 50 dipendenti",
+          "Da 501 a 1.000 dipendenti",
+          "Da 1.001 a 5.000 dipendenti",
+          "Da 5.001 a 10.000 dipendenti"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "entrate",
+        "value_set": [
+          "Pi\u00f9 di $ 10 miliardi (USD)",
+          "$ 1 - $ 5 miliardi (USD)",
+          "Sconosciuto/Non applicabile",
+          "$ 100 - $ 500 milioni (USD)",
+          "$ 5 - $ 25 milioni (USD)",
+          "Meno di $ 1 milione (USD)",
+          "$ 25 - $ 100 milioni (USD)"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "job_age",
+        "regex": " ^\\d+\\s*(g|[dh]|day(?:s)?|\\+)?$|^Oltre\\s+\\d+\\s*g$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "tipo",
+        "mostly": 0.8,
+        "value_set": [
+          "Azienda - Settore privato",
+          "Azienda quotata in borsa"
+        ]
       },
       "meta": {}
     }
