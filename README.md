@@ -19,4 +19,4 @@ password is 'DQ2022'
 
 Data Ingestion Workflow
 
-![image](https://user-images.githubusercontent.com/58252186/220355428-2a80bfa3-6174-4a7a-b94a-95bc295657e3.png)
+![image](https://user-images.githubusercontent.com/58252186/222507141-706b9436-6407-4ebb-8e78-b1fc70e53a51.png)
