@@ -1,0 +1,4 @@
+expectation_type,element_count,unexpected_count,unexpected_percent,unexpected_percent_nonmissing,missing_percent
+expect_column_values_to_be_in_set,38430.0,2689.0,16.497806241747362,16.497806241747362,62.919363515678064
+expect_column_values_to_not_be_null,243390.0,95029.0,39.67057417862908,,
+expect_column_values_to_match_regex,64050.0,33400.0,52.10271463432208,52.10271463432208,0.0
