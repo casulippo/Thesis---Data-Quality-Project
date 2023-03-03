@@ -10,11 +10,9 @@ Una volta completato il primo step sarò possibile avere immagine del nome ```Th
 
 2. ```docker run --rm -d -p 9000:8888 -p 4040:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v %cd%:/home/jovyan/ --name container_thesis thesis```
 
-
-### localhost
-open in broswer
-http://localhost:9000/
-password is 'DQ2022'
+### Step 3 - Apertura del local-host
+Se tutti gli step sono stati completati nel modo giusto sarà possibile accedere al link http://localhost:9000/ accedendo così al progetto.
+La password settata è 'DQ2022'
 
 
 Data Ingestion Workflow
