@@ -1,0 +1,4084 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data documentation compiled by Great Expectations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title></title>
+
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap-table@1.19.0/dist/extensions/filter-control/bootstrap-table-filter-control.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@forevolve/bootstrap-dark@1.1.0/dist/css/bootstrap-prefers-dark.css" />
+
+    <style>
+  
+
+body {
+  position: relative;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  z-index: 1;
+}
+
+.ge-section {
+  clear: both;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.popover {
+  max-width: 100%;
+}
+
+.cooltip {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cooltip .top {
+  min-width: 200px;
+  top: -6px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 10px 20px;
+  color: #FFFFFF;
+  background-color: #222222;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999 !important;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.cooltip:hover .top {
+  display: block;
+  z-index: 99999999 !important;
+}
+
+.cooltip .top i {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.cooltip .top i::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #222222;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+.show-scrollbars {
+  overflow: auto;
+}
+
+td .show-scrollbars {
+  max-height: 80vh;
+}
+
+/*.show-scrollbars ul {*/
+/*  padding-bottom: 20px*/
+/*}*/
+
+.show-scrollbars::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.show-scrollbars::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.show-scrollbars::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.show-scrollbars::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#ge-cta-footer {
+  opacity: 0.9;
+  border-left-width: 4px
+}
+
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+/* some css overrides for dark mode*/
+@media (prefers-color-scheme: dark) {
+  .table {
+    color: #f1f1f1 !important;
+    background-color: #212529;
+  }
+  .table-bordered{
+    border: #f1f1f1;
+  }
+  .table-hover tbody tr:hover {
+    color: #f1f1f1;
+    background-color: rgba(255,255,255,.075);
+  }
+  .form-control:disabled,
+  .form-control[readonly]{
+    background-color: #343a40;
+    opacity: .8;
+  }
+
+  .bg-light {
+    background: inherit !important;
+  }
+
+  .code-snippet {
+    background: #CDCDCD !important;
+  }
+
+  .alert-secondary a {
+    color: #0062cc;
+  }
+
+  .alert-secondary a:focus, .alert-secondary a:hover{
+    color: #004fa5;
+  }
+
+  .navbar-brand a {
+    background: url('https://great-expectations-web-assets.s3.us-east-2.amazonaws.com/full_logo_dark.png') 0 0 no-repeat;
+    background-size: 228.75px 50px;
+    display: inline-block
+  }
+  .navbar-brand a img {
+    visibility:hidden
+  }
+}</style>
+    <style>/*index page*/
+.ge-index-page-site-name-title {}
+.ge-index-page-table-container {}
+.ge-index-page-table {}
+.ge-index-page-table-profiling-links-header {}
+.ge-index-page-table-expectations-links-header {}
+.ge-index-page-table-validations-links-header {}
+.ge-index-page-table-profiling-links-list {}
+.ge-index-page-table-profiling-links-item {}
+.ge-index-page-table-expectation-suite-link {}
+.ge-index-page-table-validation-links-list {}
+.ge-index-page-table-validation-links-item {}
+
+/*breadcrumbs*/
+.ge-breadcrumbs {}
+.ge-breadcrumbs-item {}
+
+/*navigation sidebar*/
+.ge-navigation-sidebar-container {}
+.ge-navigation-sidebar-content {}
+.ge-navigation-sidebar-title {}
+.ge-navigation-sidebar-link {}</style>
+
+    
+  
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script src="https://kit.fontawesome.com/8217dffd95.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.19.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    
+  
+
+
+  
+
+<link rel="shortcut icon" href="../../../static/images/favicon.ico" type="image/x-icon"/>
+  </head>
+
+  <body>
+    
+      
+  
+
+
+
+
+  
+
+
+  
+<style type="text/css">
+div.card-footer .container {
+    padding-top: 0;
+}
+div.walkthrough-card {
+    height: 100%;
+ }
+div.modal-body {
+    height: 700px
+}
+div.image-sizer {
+    max-height: 400px;
+    width: 100%;
+    padding: 0 40px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+.code-snippet {
+    margin: 0 40px 1em 40px;
+    padding: 1em 40px;
+}
+code.inline-code {
+    padding: 2px 5px;
+}
+img.dev-loop {
+    max-height: 250px;
+}
+.json-key {
+    color: #333333;
+    font-weight: bold;
+}
+.json-str {
+    color: darkgreen;
+}
+.json-bool {
+    color: darkorange;
+}
+.json-number {
+    color: darkblue;
+}
+</style>
+
+<div class="modal fade ge-walkthrough-modal" tabindex="-1" role="dialog" aria-labelledby="ge-walkthrough-modal-title"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="ge-walkthrough-modal-title">Great Expectations Walkthrough</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card walkthrough-card bg-dark text-white walkthrough-1">
+        <div class="card-header"><h4>How to work with Great Expectations</h4></div>
+            <div class="card-body">
+              <div class="image-sizer text-center">
+                  <img src="../../../../static/images/iterative-dev-loop.png" class="img-fluid rounded-sm mx-auto dev-loop">
+              </div>
+                  <p>
+                      Welcome! Now that you have initialized your project, the best way to work with Great Expectations is in this iterative dev loop:
+                  </p>
+                <ol>
+                    <li>Let Great Expectations create a simple first draft suite, by running <code class="inline-code bg-light">great_expectations suite new</code>.</li>
+                    <li>View the suite here in Data Docs.</li>
+                    <li>Edit the suite in a Jupyter notebook by running <code class="inline-code bg-light">great_expectations suite edit</code></li>
+                    <li>Repeat Steps 2-3 until you are happy with your suite.</li>
+                    <li>Commit this suite to your source control repository.</li>
+                </ol>
+            </div>
+            <div class="card-footer walkthrough-links">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    &nbsp;
+                  </div>
+                  <div class="col-6 text-center text-secondary">
+                    1 of 7
+                    <div class="progress" style="height: 2px">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="16"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(2)">Next</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-2">
+                <div class="card-header"><h4>What are Expectations?</h4></div>
+                <div class="card-body">
+                    <ul class="code-snippet bg-light text-muted rounded-sm">
+                        <li>expect_column_to_exist</li>
+                        <li>expect_table_row_count_to_be_between</li>
+                        <li>expect_column_values_to_be_unique</li>
+                        <li>expect_column_values_to_not_be_null</li>
+                        <li>expect_column_values_to_be_between</li>
+                        <li>expect_column_values_to_match_regex</li>
+                        <li>expect_column_mean_to_be_between</li>
+                        <li>expect_column_kl_divergence_to_be_less_than</li>
+                        <li>... <a href="https://greatexpectations.io/expectations">and many more</a></li>
+                    </ul>
+                  <p>An expectation is a falsifiable, verifiable statement about data.</p>
+                  <p>Expectations provide a language to talk about data characteristics and data quality - humans to humans, humans to machines and machines to machines.</p>
+                  <p>Expectations are both data tests and docs!</p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(1)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        2 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="32"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(3)">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-3">
+                <div class="card-header"><h4>Expectations can be presented in a machine-friendly JSON</h4></div>
+                <div class="card-body">
+                    <p class="code-snippet bg-light text-muted rounded-sm">
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"expectation_type"</span>: <span class="json-str">"expect_column_values_to_not_be_null",</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"kwargs"</span>: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"column"</span>: <span class="json-str">"user_id"</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+                    </p>
+                  <p>A machine can test if a dataset conforms to the expectation.</p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(2)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        3 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="50"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(4)">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-4">
+                <div class="card-header"><h4>Validation produces a validation result object</h4></div>
+                <div class="card-body">
+                     <p class="code-snippet bg-light text-muted rounded-sm">
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"success"</span>: <span class="json-bool">false</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"result":</span> {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"element_count"</span>: <span class="json-number">253405,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"unexpected_count"</span>: <span class="json-number">7602,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"unexpected_percent"</span>: <span class="json-number">2.999</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"expectation_config"</span>: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"expectation_type"</span>: <span class="json-str">"expect_column_values_to_not_be_null"</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"kwargs"</span>: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"column"</span>: <span class="json-str">"user_id"</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+                    </p>
+                  <p>Here's an example Validation Result (not from your data) in JSON format. This object has rich context about the test failure.</p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(3)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        4 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="68"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(5)">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-5">
+                <div class="card-header"><h4>Validation results save you time.</h4></div>
+                <div class="card-body">
+                  <div class="image-sizer text-center">
+                      <img src="../../../../static/images/validation_failed_unexpected_values.gif" class="img-fluid rounded-sm mx-auto">
+                  </div>
+                  <p>This is an example of what a single failed Expectation looks like in Data Docs. Note the failure includes unexpected values from your data. This helps you debug pipelines faster.</p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(4)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        5 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="84"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(6)">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-6">
+                <div class="card-header"><h4>Great Expectations provides a large library of expectations.</h4></div>
+                <div class="card-body">
+                  <div class="image-sizer text-center">
+                      <img src="../../../../static/images/glossary_scroller.gif" class="img-fluid rounded-sm mx-auto">
+                  </div>
+                  <p><a href="https://greatexpectations.io/expectations">Nearly 50 built in expectations</a> allow you to express how you understand your data, and you can add custom
+                  expectations if you need a new one.
+                  </p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(5)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        6 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="84"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-primary float-right" onclick="go_to_slide(7)">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="card walkthrough-card bg-dark text-white walkthrough-7">
+                <div class="card-header"><h4>Now explore and edit the sample suite!</h4></div>
+                <div class="card-body">
+                  <p>This sample suite shows you a few examples of expectations.</p>
+                  <p>Note this is <strong>not a production suite</strong> and was generated using only a small sample of your data.</p>
+                  <p>When you are ready, press the <strong>How to Edit</strong> button to kick off the iterative dev loop.</p>
+                </div>
+                <div class="card-footer walkthrough-links">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <a href="#" class="next-link btn btn-secondary float-left" onclick="go_to_slide(6)">Back</a>
+                      </div>
+                      <div class="col-6 text-center text-secondary">
+                        7 of 7
+                        <div class="progress" style="height: 2px">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <button type="button" class="btn btn-primary float-right" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">Done</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/JavaScript">
+  $(".ge-walkthrough-modal").on('hide.bs.modal', function (e) {
+    try {
+      localStorage.setItem('ge-walkthrough-modal-dismissed', 'true');
+    }
+    catch (e) {
+      console.log(e);
+    }
+    go_to_slide(1);
+  })
+</script>
+
+
+<script type="text/JavaScript">
+  function go_to_slide(slide_number) {
+    hide_cards();
+    $('.walkthrough-' + slide_number).show();
+  }
+  function hide_cards() {
+    $('.walkthrough-card').hide();
+  }
+  hide_cards();
+  go_to_slide(1);
+</script>
+    
+
+    
+      
+  
+
+
+
+
+
+  
+
+<script type="text/javascript">
+$(function() {
+    $('button.copy-edit-command').click(function() {
+        $('.edit-command').focus();
+        $('.edit-command').select();
+        document.execCommand('copy');
+    });
+});
+</script>
+
+<div class="modal fade ge-expectation-editing-instructions-modal" tabindex="-1" role="dialog" aria-labelledby="ge-expectation-editing-instructions-modal-title"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ge-expectation-editing-instructions-modal-title">How to Edit This Expectation Suite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="height: 350px">
+        <p>Expectations are best <strong>edited interactively in Jupyter notebooks</strong>.</p>
+        <p>To automatically generate a notebook that does this run:</p>
+        <div class="input-group mb-3">
+          
+            <input type="text" class="form-control edit-command" readonly value="great_expectations suite edit Main">
+          
+            <div class="input-group-append">
+                <button class="btn btn-primary copy-edit-command" type="button"><i class="far fa-clipboard"></i> Copy</button>
+            </div>
+        </div>
+      <p>Once you have made your changes and <strong>run the entire notebook</strong> you can kill the notebook by pressing <strong>Ctr-C</strong> in your terminal.</p>
+      <p>Because these notebooks are generated from an Expectation Suite, these notebooks are <strong>entirely disposable</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  
+
+
+  
+
+<nav class="navbar navbar-expand-md sticky-top border-bottom" style="height: 70px">
+  <div class="mr-auto">
+    <nav class="d-flex align-items-center">
+      <div class="float-left navbar-brand m-0 h-100">
+        <a href="../../../../index.html">
+          <img
+            class="NO-CACHE"
+            src="https://great-expectations-web-assets.s3.us-east-2.amazonaws.com/logo-long.png?d=20230302T212449.508028Z"
+            alt="Great Expectations"
+            style="width: auto; height: 50px"
+          />
+        </a>
+      </div>
+      
+        <ol class="ge-breadcrumbs breadcrumb d-md-inline-flex bg-light ml-2 mr-0 mt-0 mb-0 pt-0 pb-0 d-none">
+            <li class="ge-breadcrumbs-item breadcrumb-item"><a href="../../../../index.html">Home</a></li>
+            <li class="ge-breadcrumbs-item breadcrumb-item active" aria-current="page">Validations / Main / 20230302-212447-scraping_all_20230220 / 2023-03-02T21:24:47Z</li>
+        </ol>
+      
+    </nav>
+  </div>
+</nav>
+    
+      <script>
+        try {
+          if (localStorage.getItem('ge-walkthrough-modal-dismissed') !== 'true') {
+            $(".ge-walkthrough-modal").modal();
+          }
+        }
+        catch(error) {
+          $(".ge-walkthrough-modal").modal();
+          console.log(error);
+        }
+      </script>
+    
+
+    <div class="container-fluid pt-4 pb-4 pl-5 pr-5">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-12 d-sm-block px-0">
+  <div class="mb-4">
+  
+    <div class="col-12 p-0">
+      <h4>Expectation Validation Result</h4>
+      <p class="lead">Evaluates whether a batch of data matches expectations.</p>
+    </div>
+  
+</div>
+  <div class="sticky">
+    
+      <script>
+    function showAllValidations() {
+    $(".hide-succeeded-validation-target-child").parent().fadeIn();
+    $(".hide-succeeded-validation-target").fadeIn();
+    $(".hide-succeeded-validations-column-section-target-child").parent().parent().each((idx, el) => {
+      $(el).fadeIn();
+      const elId = el.id;
+      $(`a[href$=${elId}]`).fadeIn();
+    })
+  }
+
+    function hideSucceededValidations() {
+    $(".hide-succeeded-validation-target-child").parent().fadeOut();
+    $(".hide-succeeded-validation-target").fadeOut();
+    $(".hide-succeeded-validations-column-section-target-child").parent().parent().each((idx, el) => {
+      $(el).fadeOut();
+      const elId = el.id;
+      $(`a[href$=${elId}]`).fadeOut();
+    })
+  }
+</script>
+
+<div class="card mb-3">
+  <div class="card-header p-2">
+    <strong>Actions</strong>
+  </div>
+  <div class="card-body p-3">
+    
+      <div class="mb-2">
+        <p class="card-text col-12 p-0 mb-1">
+          Validation Filter:
+        </p>
+        <div class="d-flex justify-content-center">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary active" onclick="showAllValidations()">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Show All
+            </label>
+            <label class="btn btn-primary" onclick="hideSucceededValidations()">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Failed Only
+            </label>
+          </div>
+        </div>
+      </div>
+    
+    
+      
+        <div class="mb-2">
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".ge-expectation-editing-instructions-modal">
+              <i class="fas fa-edit"></i> How to Edit This Suite
+            </button>
+          </div>
+        </div>
+      
+
+      <div class="mb-2">
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target=".ge-walkthrough-modal">
+            Show Walkthrough
+          </button>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+    
+      <div class="card d-md-block d-none" style="max-height: 75vh">
+  <div class="card-header p-2">
+    <strong>Table of Contents</strong>
+  </div>
+  <div class="card-body p-0" style="overflow: auto; height: 100%">
+    <nav id="navigation" class="rounded navbar   bg-light ge-navigation-sidebar-container p-1" style="max-height: 65vh;">
+      <ul class="nav nav-pills ge-navigation-sidebar-content col-12 p-0" style="max-height: 65vh">
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link" href="#section-1"
+               style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                <strong>Overview</strong>
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-2"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                company
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-3"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                company_rating
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-4"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                cultura_e_valori
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-5"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                dimensioni
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-6"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                dirigenti_senior
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-7"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                entrate
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-8"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                equilibrio_lavoro_vita_privata
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-9"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                fondata_nel
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-10"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                job_age
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-11"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                job_link
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-12"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                job_title
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-13"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                location
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-14"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                oppurtunita_carriera
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-15"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                scraping_date
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-16"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                sede_centrale
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-17"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                segmento
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-18"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                settore
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-19"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                stipendio_e_benefit
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item col-12">
+              <a class="nav-link ge-navigation-sidebar-link ml-1" href="#section-20"
+                 style="white-space: normal; word-break: break-all;overflow-wrap: normal;">
+                tipo
+              </a>
+            </li>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</div>
+    
+  </div>
+</div>
+        <div class="col-md-10 col-lg-10 col-xs-12 pl-md-4 pr-md-3">
+        
+          <div id="section-1" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-1-content-block-1" class="col-12 p-0" >
+
+    <div id="section-1-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    Overview
+                </h5>
+            
+        </div>
+      
+    
+        <div id="section-1-content-block-1-subheader" >
+          
+                <span class="mb-0 mt-1" >
+                    <span class="h6" >Expectation Suite:</span> <a href="../../../../expectations/Main.html" >Main</a><br> Data asset: None<br> <span class="h6" >Status:</span> <i class="fas fa-times text-danger" aria-hidden="true"></i> Failed
+                </span>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-1-content-block-2" class="col-6 table-responsive mt-1 p-1" >
+
+    <div id="section-1-content-block-2-header" >
+        
+          
+            <div>
+              
+                <h6 class="m-0" >
+                    Statistics
+                </h6>
+            
+            </div>
+          
+        </div>
+
+
+
+
+<table
+  id="section-1-content-block-2-body"
+  class="table table-sm" style="margin-bottom:0.5rem !important; margin-top:0.5rem !important;" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+      
+      
+    
+      <thead hidden>
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-1-content-block-2-cell-1-1" ><div class="show-scrollbars">Evaluated Expectations</div></td><td id="section-1-content-block-2-cell-1-2" ><div class="show-scrollbars">60</div></td></tr><tr>
+          <td id="section-1-content-block-2-cell-2-1" ><div class="show-scrollbars">Successful Expectations</div></td><td id="section-1-content-block-2-cell-2-2" ><div class="show-scrollbars">42</div></td></tr><tr>
+          <td id="section-1-content-block-2-cell-3-1" ><div class="show-scrollbars">Unsuccessful Expectations</div></td><td id="section-1-content-block-2-cell-3-2" ><div class="show-scrollbars">18</div></td></tr><tr>
+          <td id="section-1-content-block-2-cell-4-1" ><div class="show-scrollbars">Success Percent</div></td><td id="section-1-content-block-2-cell-4-2" ><div class="show-scrollbars">70%</div></td></tr></tbody>
+</table>
+
+</div>
+        
+
+<div id="section-1-content-block-3" class="col-12 p-1" >
+
+    
+
+
+  
+    
+    
+  
+    
+  
+
+
+
+
+
+
+<div id="section-1-content-block-3-parent" >
+  
+    <p class="m-0">
+      <a data-toggle="collapse" href="#section-1-content-block-3-collapse-body-a0242f20-1963-4198-8c9d-f95ab923d4e1" aria-expanded="false" aria-controls="section-1-content-block-3-collapse-body" >
+        Show more info...
+      </a>
+    </p>
+  
+
+  <div id=section-1-content-block-3-collapse-body-a0242f20-1963-4198-8c9d-f95ab923d4e1 class="card card-body collapse m-2" >
+    
+    
+    
+      
+      
+      <div id="section-1-content-block-3-collapse-item-1-header" >
+        
+          
+            <div>
+              
+                <h6 class="m-0" >
+                    Info
+                </h6>
+            
+            </div>
+          
+        </div>
+
+
+
+
+<table
+  id="section-1-content-block-3-collapse-item-1-body"
+  class="table table-sm" style="margin-bottom:0.5rem !important; margin-top:0.5rem !important;" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+      
+      
+    
+      <thead hidden>
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-1-content-block-3-collapse-item-1-cell-1-1" ><div class="show-scrollbars">Great Expectations Version</div></td><td id="section-1-content-block-3-collapse-item-1-cell-1-2" ><div class="show-scrollbars">0.15.48</div></td></tr><tr>
+          <td id="section-1-content-block-3-collapse-item-1-cell-2-1" ><div class="show-scrollbars">Run Name</div></td><td id="section-1-content-block-3-collapse-item-1-cell-2-2" ><div class="show-scrollbars">20230302-212447-scraping_all_20230220</div></td></tr><tr>
+          <td id="section-1-content-block-3-collapse-item-1-cell-3-1" ><div class="show-scrollbars">Run Time</div></td><td id="section-1-content-block-3-collapse-item-1-cell-3-2" ><div class="show-scrollbars">2023-03-02T21:24:47Z</div></td></tr></tbody>
+</table>
+    
+      
+      
+      <div id="section-1-content-block-3-collapse-item-2-header" >
+        
+          
+            <div>
+              
+                <h6 class="m-0" >
+                    Batch Markers
+                </h6>
+            
+            </div>
+          
+        </div>
+
+
+
+
+<table
+  id="section-1-content-block-3-collapse-item-2-body"
+  class="table table-sm" style="margin-bottom:0.5rem !important; margin-top:0.5rem !important;" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+      
+      
+    
+      <thead hidden>
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-1-content-block-3-collapse-item-2-cell-1-1" class="pr-3" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >ge_load_time</span>
+                </span>
+            </div></td><td id="section-1-content-block-3-collapse-item-2-cell-1-2" class="" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >20230302T212447.789373Z</span>
+                </span>
+            </div></td></tr><tr>
+          <td id="section-1-content-block-3-collapse-item-2-cell-2-1" class="pr-3" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >pandas_data_fingerprint</span>
+                </span>
+            </div></td><td id="section-1-content-block-3-collapse-item-2-cell-2-2" class="" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >66d6b6e54bb75e992c9e7aad290d502a</span>
+                </span>
+            </div></td></tr></tbody>
+</table>
+    
+      
+      
+      <div id="section-1-content-block-3-collapse-item-3-header" >
+        
+          
+            <div>
+              
+                <h6 class="m-0" >
+                    Batch Spec
+                </h6>
+            
+            </div>
+          
+        </div>
+
+
+
+
+<table
+  id="section-1-content-block-3-collapse-item-3-body"
+  class="table table-sm" style="margin-bottom:0.5rem !important; margin-top:0.5rem !important;" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+      
+      
+    
+      <thead hidden>
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+                
+                <th
+                  
+                >
+                  
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-1-content-block-3-collapse-item-3-cell-1-1" class="pr-3" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >path</span>
+                </span>
+            </div></td><td id="section-1-content-block-3-collapse-item-3-cell-1-2" class="" ><div class="show-scrollbars">
+                <span >
+                    <span style="word-break:break-all;" >/home/jovyan/great_expectations/../data/scraping_all_20230220.csv</span>
+                </span>
+            </div></td></tr></tbody>
+</table>
+    
+  </div>
+</div>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-2" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-2-content-block-1" class="col-12 p-0" >
+
+    <div id="section-2-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    company
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-2-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-2-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-2-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-2-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-2-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-2-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-2-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-2-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-2-content-block-2-cell-3-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-2-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match this regular expression: <span class="badge badge-secondary" >^[A-Z].*$</span>.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>96 unexpected values found. 20% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-2-content-block-2-cell-3-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-2-content-block-2-cell-3-2-content-2-cell-1-1" ><div class="show-scrollbars">adecco</div></td><td id="section-2-content-block-2-cell-3-2-content-2-cell-1-2" ><div class="show-scrollbars">16</div></td></tr><tr>
+          <td id="section-2-content-block-2-cell-3-2-content-2-cell-2-1" ><div class="show-scrollbars">zonaprestiti srl</div></td><td id="section-2-content-block-2-cell-3-2-content-2-cell-2-2" ><div class="show-scrollbars">2</div></td></tr><tr>
+          <td id="section-2-content-block-2-cell-3-2-content-2-cell-3-1" ><div class="show-scrollbars">futura service & solutions srls</div></td><td id="section-2-content-block-2-cell-3-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-2-content-block-2-cell-3-2-content-2-cell-4-1" ><div class="show-scrollbars">jobtech</div></td><td id="section-2-content-block-2-cell-3-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-2-content-block-2-cell-3-3" ><div class="show-scrollbars">20% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-3" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-3-content-block-1" class="col-12 p-0" >
+
+    <div id="section-3-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    company_rating
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-3-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-3-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-3-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>366 unexpected values found. 76.25% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-3-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-3-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-3-content-block-2-cell-1-3" ><div class="show-scrollbars">23.75% not null</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-3-3" ><div class="show-scrollbars">1.5</div></td></tr><tr>
+          <td id="section-3-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-3-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-4" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-4-content-block-1" class="col-12 p-0" >
+
+    <div id="section-4-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    cultura_e_valori
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-4-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-4-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-4-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-4-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-4-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-4-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-3-3" ><div class="show-scrollbars">0</div></td></tr><tr>
+          <td id="section-4-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-4-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-5" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-5-content-block-1" class="col-12 p-0" >
+
+    <div id="section-5-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    dimensioni
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-5-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-5-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-5-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-5-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-5-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-5-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-5-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-5-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-5-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-5-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-5-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-5-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-5-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must belong to this set: <span class="badge badge-secondary" >Oltre 10.000 dipendenti</span> <span class="badge badge-secondary" >Da 201 a 500 dipendenti</span> <span class="badge badge-secondary" >Da 51 a 200 dipendenti</span> <span class="badge badge-secondary" >Sconosciuto</span> <span class="badge badge-secondary" >Da 1 a 50 dipendenti</span> <span class="badge badge-secondary" >Da 501 a 1.000 dipendenti</span> <span class="badge badge-secondary" >Da 1.001 a 5.000 dipendenti</span> <span class="badge badge-secondary" >Da 5.001 a 10.000 dipendenti</span>.
+                </span>
+            </div></td><td id="section-5-content-block-2-cell-3-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-6" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-6-content-block-1" class="col-12 p-0" >
+
+    <div id="section-6-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    dirigenti_senior
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-6-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-6-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-6-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-6-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-6-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-6-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-3-3" ><div class="show-scrollbars">0</div></td></tr><tr>
+          <td id="section-6-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-6-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-7" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-7-content-block-1" class="col-12 p-0" >
+
+    <div id="section-7-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    entrate
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-7-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-7-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-7-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-7-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-7-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-7-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-7-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-7-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-7-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-7-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-7-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-7-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-7-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must belong to this set: <span class="badge badge-secondary" >Più di $ 10 miliardi (USD)</span> <span class="badge badge-secondary" >$ 1 - $ 5 miliardi (USD)</span> <span class="badge badge-secondary" >Sconosciuto/Non applicabile</span> <span class="badge badge-secondary" >$ 100 - $ 500 milioni (USD)</span> <span class="badge badge-secondary" >$ 5 - $ 25 milioni (USD)</span> <span class="badge badge-secondary" >Meno di $ 1 milione (USD)</span> <span class="badge badge-secondary" >$ 25 - $ 100 milioni (USD)</span>.
+                </span>
+            </div></td><td id="section-7-content-block-2-cell-3-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-8" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-8-content-block-1" class="col-12 p-0" >
+
+    <div id="section-8-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    equilibrio_lavoro_vita_privata
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-8-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-8-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-8-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-8-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-8-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-8-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-3-3" ><div class="show-scrollbars">0</div></td></tr><tr>
+          <td id="section-8-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-8-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-9" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-9-content-block-1" class="col-12 p-0" >
+
+    <div id="section-9-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    fondata_nel
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-9-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-9-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-9-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-9-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >int</span>.
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-2-3" ><div class="show-scrollbars">int64</div></td></tr><tr>
+          <td id="section-9-content-block-2-cell-3-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match this regular expression: <span class="badge badge-secondary" >[0-9]{4}</span>.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>316 unexpected values found. ≈65.83% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-9-content-block-2-cell-3-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-9-content-block-2-cell-3-2-content-2-cell-1-1" ><div class="show-scrollbars">0</div></td><td id="section-9-content-block-2-cell-3-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-9-content-block-2-cell-3-3" ><div class="show-scrollbars">≈65.833% unexpected</div></td></tr><tr>
+          <td id="section-9-content-block-2-cell-4-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >1000</span>.
+                </span>
+            </div></td><td id="section-9-content-block-2-cell-4-3" ><div class="show-scrollbars">0</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-10" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-10-content-block-1" class="col-12 p-0" >
+
+    <div id="section-10-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    job_age
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-10-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-10-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-10-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-10-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-10-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-10-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-10-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-10-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match this regular expression: <span class="badge badge-secondary" > ^\d+\s*(g|[dh]|day(?:s)?|\+)?$|^Oltre\s+\d+\s*g$</span>.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>287 unexpected values found. ≈59.79% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-10-content-block-2-cell-3-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-1-1" ><div class="show-scrollbars">22 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-1-2" ><div class="show-scrollbars">8</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-2-1" ><div class="show-scrollbars">2 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-2-2" ><div class="show-scrollbars">3</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-3-1" ><div class="show-scrollbars">1 giorno fa</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-3-2" ><div class="show-scrollbars">2</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-4-1" ><div class="show-scrollbars">16 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-4-2" ><div class="show-scrollbars">2</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-5-1" ><div class="show-scrollbars">11 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-6-1" ><div class="show-scrollbars">14 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-7-1" ><div class="show-scrollbars">24 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-8-1" ><div class="show-scrollbars">24 h</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-10-content-block-2-cell-3-2-content-2-cell-9-1" ><div class="show-scrollbars">3 g</div></td><td id="section-10-content-block-2-cell-3-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-10-content-block-2-cell-3-3" ><div class="show-scrollbars">≈59.792% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-11" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-11-content-block-1" class="col-12 p-0" >
+
+    <div id="section-11-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    job_link
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-11-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-11-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-11-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-11-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-11-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-11-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-11-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-11-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match this regular expression: <span class="badge badge-secondary" >^https://www\.glassdoor\.it/job-listing/.*</span>.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>480 unexpected values found. 100% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-11-content-block-2-cell-3-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-1-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=103&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&cs=1_e4df87ab&cb=1676655342726&jobListingId=1008469854501&cpc=52707B81699D15F2&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-939b50c95f5c6ed5--6NYlbfkN0Dpk2nRRB2qCzcWtelMs6RnOpE2QQykp_Gr47Tac0r5hLJY1tCAziAL0HFUb0VPmGbPLrGrZYiFMqw7bwirlrlzV6YgFCLdOFiCv74HM3WsOP_Tbc-TylLbFkkSLo1CgozbIFCeJa3Tx1uqYfjcpM4dr7r4maHtWQhemTjEyJMGvIaGEOQ2wRHl5OvpSXbN32IDA9UV2uZsUTlavQGWkE81g_BxKY1GX1VTr6x69cta105U5GgskTGpTsgSxsDGNSnTj40xaJ-F7FON5bROPh2N965SPw6Um04_Av6QTzPLIVFLBXnPXOJtPdr3Eg61HI9AYVeaNHvh8SOdfYTdoaywKWgufwa0klF_aSNsx2z_M-0yDJEocxM7TD3ESF23UHn00I_RxIQVb2A2pj8voJuC_gWkm2gwH7boSH113slL9m7RL1CPAooa9iXIKA8Ij_EiLaUkqRxfV8bZizSZ_KxSGglcVc_ryADPIhA_eFUdIOiD05--TcMDZ6t8oD4XFzEypXKhw4fFQ0PStwGYnKij</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-2-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=110&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&cs=1_38f26a3a&cb=1676655342726&jobListingId=1008301315650&cpc=C6B4EF5A80B9F897&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-da77b1cc15e5a0c5--6NYlbfkN0DAv-knXWXtWP4BSZ5vXP1CKdoDUf5S6mXEs2UdONmIWlVd8a84ouEntKZlEKwwLXNv4GDy_TU9L636ScSklayoVTq3w6ZBPaRSEFHIgGJ1MR57yip0q1dldvqtmiCZGIAPrOowcRPyZLiHNpTGc8wI484DW13ykdNrx18S0JwpHcVpgzBWAhFayPm1-_VnytF4VilKKB-bhp2q6PwUZLG0dOi5WsP8wo7Nh27-qJ_q0cNaPUSYYuGb013Z1e9uRxSxRO47Y9UYWMKv-S5mso1APaKeMPlvamYEH6BjQPcQf75tLovHsiIofgN9yRimAgjJYvhDLCfklVZo0kVTDrg5v-kbyrAijmORNBKUl6Alk1pOB974Fhln-eTlw1yRpSDe1OWhEKL4OuVHTmVeJRdE6fOcx0CnsQjSu3LrrlvxBl7s0t-uOjlgF33cROLTEQB2IxbDtDQTwwXM4t3Aftetlam3K7koTuooH-REUAV9HZwYyPleKvr5lQEfB3-s8bsTcU8df3e4YSN-AFIF9eawe7TaKnlTVk1iATpsoEJZdlLD_kujDQe_ZJ3tSrtTA6ZJrgvLnbmiJIPCbmCoSARl_H6-Xls8oqCHZPR_IiMYj7qweHIxDjix8VNpb2Yuuz8MlKKumjAeIV_lYm68sXrY</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-3-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=114&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&cs=1_de89d140&cb=1676655342727&jobListingId=1008428773916&cpc=45DC3EB807283E85&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-f272cb7c770644bb--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw5olmPJnIU8hjTuYVAlx-TltGJXhmPQgrti11FsCOPAF0O-2sEASZaYtpTTmwTqAxh71jjznqODkp35cfDgnfmz88CW0CihiugB1BX916L3VbghsYH7DiefkKcWyKdbmxm4kVMuCqoZczyf3CE9cGOHO6HFp0WrMVnXdaNmu9hPGqXpZ40Jz4OSMQEyJQo0u5_3h1dxZZrIyl8rzJy5dJ4pt7sUz0KguVCOjTC4Wsq5OUw4spcpOlXKn0v2QKxtlCKJRGMjCtcUSRnMIUbcI1pTrAkURSu-v2u2zZMP3VirfagD_qSuE3BsNsALCX-3xTMUe4eYoumPUFeOrCRqHh3NkEJ7Tf1ePxW8XSF87VrwZp5eJQSDNWQU7vkVPURTbdFlq1lym6wpC83Oa_VzBL9s9uXNyVH8gcCq0T1bTH2Iake6Sg9JCCWcVWjwxtWw-dKGAKh-314E2s_aEa5LoYyIPmBGFBtHN36Dfhj34WrKTQJyOXi4t-5us4BrwEEFM-olf_odGpRakkjg6LjCR0RepBNSL2IM6035oHjd0-WCjPIui4NifLBHG1TtkFK5hfwH4bfBVXhGMRN2TRwn1DIXCu2IQN8uGXERPQiMBrhCZBiQheogp08wZjDgVkAhytA4VFmgXjsC0gE-I7MO0Ab7OgVAlvWTLLRHHGOM2GunCuBleH213ueXbiHTNcRqNIeQ93r4y7MAuO2gOfdr-ONlv0ZLNz0Frta_yLD2OTo_uqNaGF792I9_</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-4-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=115&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_914bad58&cb=1676655342727&jobListingId=1008440673441&cpc=74FD5BE86273CE52&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-9d3e12654a392818--6NYlbfkN0AahMpHASL-rqQOt-rayfGPjlZqDLP80wvjLoSAvCb3DLOHx-iGyjXKxQXTtSXpLYuEBcopkuJwtca4PPjJ3bQnSWR02xAAo-i0A8xWJoFq2NQ_ODLQSJfO7KUtftZtO4cqnfv-_Vzu8Jzs2xH3HsOlg9Wyu-bISdm4IiXWDcpq2VyqJBy3Iy9vwly6VDDsHGUFh1GJagaCgJuQJxh4IQ5CBmme-i-IE1GoeBcK3K3LMOzHBq7T8albqVs0SppIvu3h8Lfg16vhlFpPyyCcJt_97UZqjLZqUWTNCaff1j24B8iNZ2HmkhTTE38GGOf5L9Z2qxe-wFNK8pQnPwG00ldseTqtxlmOLYLN2HHG6TXMDbxuEtkCzKd-xAqHVcu3QA5IV9g9vqii8X4Y1i8lEz8vQ7nXtNYJMJo28NIKwFV9Yx7OR9V8R9k1XlLh_65WSAgcI9Q8y4kpOM5hmxLM9387V7xk5ll9uDXudqRr9OicONUCYD46S5kXCS3HeprfpgjEL99FMs-AkMgiSbfbQMI4nAYJeWiueuCW5PNBBVyZ6aXalPYYmkb_NCEgF2eArRPs_Ryu-W6fvovIyxUVRYjD</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-5-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=116&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&cs=1_b52e1edb&cb=1676655342727&jobListingId=1008379687561&cpc=61E17551093C17CB&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-b54816c8e4a270c7--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK0Ai5t64Dnzs_QL1bAdf2W2nGtAgW4e0sBUZIW9biWKeIRyPG3_y2svNz6q3-50lpIeDlG1v_G5fVQ0AA1g4VKU5xnlBHHcbwh1JDDnTRDDYyBHYEOWoYi1E8zqHHNhIX3jBItcF4si8EMagLRZ_6yDit1AUnLdKxUNqk8jMFdGKw1K5RXSBJ1WaoiVvKeicBwVMTA2pX5JNR0Gb22b_lluNNoBwmL7NecAes1Yc8OWTaBGQDEhlxdXmmraKE9opswaFz_jsayiPIS4v8Q5EvGkD_9HXm8_Vr-pMZc61mcpWWlFlwBHBx0iZm3Jtz8uZYCIGqZYjZyO5Blj6Ybko8TCvawPcWNUvnKfff_4u-G5znivKe87C7O-Jhtbbyi5UA7x08nTsViMVbuiL5p0glyYu7SPBM3MnPw6C_6LlZ7h6EhVgNjqbAygxPJA8yhU0GBUtKIMuyFJJOuEWOKkHWHRTcuiGuLLGzpH_Y_QYkVYv2nTjHm6Ikvii8u3mVWwf465XzEceR9CayhySfhXqq8JfWx2o5KhlVeg3VvaESa4SwiHo3t1WeDFLPbDlQ5hsJQLWXOr-epT77CQPcYzUET5XG-rYXvLx_LJzg90eTmdkIZG9ls4okInvxzLBdpWiWDi_gjdE1svPzpjxaAVkPr2S9VkONyRsSNs_CF_Ek3cLO95vB_MwGNKTSvkwF5dAFgd5R8Cgp2bocYTQTwElWKAKfFhOo6hoR5HZiw499kJpiDUdPmweVRyRdhJ_0iFOX3gdIxieQ_5axb9vv12TGLQ%3D%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-6-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=120&ao=1136043&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_1e709e6f&cb=1676655342728&jobListingId=1008476715254&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-493f6009ff740379-</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-7-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=121&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_51737cd2&cb=1676655342728&jobListingId=1008449305308&cpc=3164FDD6030E246B&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-067888008086db39--6NYlbfkN0BoUa4XU3QXXh3juriSs8bTpmpOzyGZTZEFJv_EuaW426wr2B0YjYydpuI71ODuRbqC_tb6IIhWQgEYgZ8mpP-vG6MIggW7BZLcWXzOBSyeq21zXmSLx_FdvzeOH0eLd0JZvTPjPyGgT1TWYxdzXPhk2gYcEXD1HQvXheAdrB9HaSYYMhUCQ4IqEXfbLFpSnhiG6ZHJ9NrO8xbdusezgXH6IkIKqQ9tmPxf7Vcsv0xg8K_sbCB8Fc3iTnkR6FEIyNzM-ZUTebSuSUXeWyL8hb4muMcSbZPcjWtd4sQV5F1d9Sr8T74RmHzExLQItQyYyYi0_phlTC7hCILFkG2C7HdA5fs3Lf-R6qnUN-ULf8sZP7XG1D9W1JCsjw73YhcAkfhiNp0zaW-kAiUTibeMRV19-NPit6Y5khB6_E3yASKYsYsnNLqFjB3Vp5SU3VX7icqgQl9dzIW_ifbpZ4tZfA8Zfd0CgVBkSmB2akctYpCFocLlvMPP-a1k1EEpBXWyXrKlkrZQZJ0E-DphK8Aikmdxu0rHxl6VZd29m6HwgzuiZfuANw57btIwFQHd8O6hRLjJ9mVB34t6X6XQB-S0WgTp</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-8-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=125&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_cfc01f45&cb=1676655342728&jobListingId=1008323391315&cpc=26740BCDE5E48596&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-be37289a255309c3--6NYlbfkN0Dz3AuqXvTJSjd4gQfvCuL_KWYarbhv_t5tCrDLg0d8K85tmBL0WXz_DMkxa1FYS9xYhRQTzQ87El0e_XJs0iImvnuN9p4ycZhVXxr2FWgXsJmGHSc0QN0jrhJEYHwbheXzsIxK6LFxNYQDdiedLwH9OOSnLaiHUGTcMgK2CY0gCKKG-IKoIILSunDbV6WkA2Oe2fYejUtljpiWs_FE_AkGII9hsUmXmyJ3Ewr7U_BuGfsEJwdslRytx52Z8lMKOcQ202iK7ab5A-UBy5BFZpHaFQQ28ys6kqzi-Hz_Ie4xfnD2AIu_t9ZNNMyXCoHwMJwUKxXrONdb3GjdZhT3NDQVgXPjs2Pz3NLkw5_6DKhp7_cCpcbhkfnHJW2WTwZ_kFpxI-fmcMkav9GJvC70Yy08Tb5hw5YTmgwrdKbbx2IRTI0EDjIA_XY-pdaCwIg1-_IFZ0KML5kLJv68N-H51hE9ucRZzl-etl9JKdt4JaDibkjh5KZLchPZ9OSqf0Z5x3Vq99cJqJzkRiSh8SxSkSdHlCXvIgAhBVGYIh0nO5BufKnrIIPxZu2p</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-9-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=128&ao=1110586&s=58&guid=0000018660723314b58a17f9dd40be17&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_83d3b054&cb=1676655342728&jobListingId=1008409766402&cpc=67D5E609A3B8C355&jrtk=3-0-1gpg74cq52jq7001-1gpg74cqoi9ic800-c3ab136d97340a54--6NYlbfkN0DZ5fB6ks13DC-jxq_wMmewzRNuiIFDRdU-Fpp7Bd_z27LtdHxPYPLygKk9s8OP6qCMgq19wJFPiJ6dsnXVgQ7EnaSdTRmHm2HmNF_IZelmQJwA5A9ZZwF5GhXtLFsHd7ZXYkEuLN4F-_o_9_19Q3b_y4CpI4ZK5_13HjQCkxQSLD-sDO_kw7giEKDZ28bO9LgW577BK7oacPPSkP15XTPPXTXxf-E6_Deh1kMpnVhIUlZ0XMzG_TkV0EBrA6UwxxJY9hO_KhX4prkhQM0c4ePyKrDsxSjVnL9GSkL-99ybXfhnoE40IekY0TwQQBb3RvYOwvdnkC6rUfl5f7brF0TAa0fwgKxan3SyiGb9MU_5w1vAdFc6fooatOS_SGUxerFpyx62wwWpxrpa1-hy5Emuaf5kYrirohjUoGh9aOOiouhEJKabp_jPVKVcTja0I614bHsJ5oQ5dsSKKLedr11SKNSOYuuUrXi4Ggj1EnKh4oLYkRET6zY2pirc5VENfWbExWBjwWteW7qfFSzduFWtO3a0mlJuIhicDW_fuuevcMnUICOndSH8l29pw07nGZM%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-10-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=204&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_9030935f&cb=1676655359022&jobListingId=1008428774169&cpc=76BDADE3D6D9A820&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-06c02a7b00e7b5c6--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw5olmPJnIU8hspze5Ei2_3j3hTJ51dk_Q7IJTpCTPIR09ebFBpYbd2UsalHjPPQocUISAn46tCPTYa3gCOBKn7RXoVARJ8ID2lxtdoE266qpcYHB8857qOeB4ZpiwBGLHo1xn7JbqUYYjH8HO2gnBuGRNIDU3Ha5f1WkaOMZHNu_ndxQRHxl0NRdIEOghGXWv7KlCn2_W185PgYRgu8koSUV4yHk_Q1W7HOolh9pQ9xm3WlkiQFztqcFe6p94kqcYYw3fh6caBSVD_LwCEzbBOTOUvlHa_9tn9qT0SuWIx7NP52rEoPf_g2dk5Nn3iyMSYnO7-UP-78P9o1r2xoml31psPrthA9_lh3s6dc-iQVF5TZ6cFnp_dGXnF4KjrVkZMxkaL0J8ktzvryM0ZWqALb403fi0d6QPVVFTDD8Wr_XFur-zC6kvaJHFauTCMppisX87LLRB_AE733hlfQi8BI4lrfu9cesCezsC07DdDGDQpLcrIzPm6pDdNEe8dy7alhJDfPCXaYkHkZSKZfZhkpgoGUcjUFEjuKOfNBdtZ1HE5_OiIqXHDA5TsHHL4oHPg9NYlCOKwHaDS6QAseOw0C45Hid7mL_LWh7lJQMKasPssFOqz6x8UX-SJPdEH8bzmQDfZdYorMQpTWJvslhHI0KMU0D928g4CLSdhLnegAJMa6vSUJEbhLRGlQ_OgYhmT7RWgRG2jo8CPZXkxWm4Y2PIzkHvZvTy1LkCZ5oyCXy5IaVNLnfkDcp75AFjC-aoc%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-11-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=206&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_14cf1f8f&cb=1676655359022&jobListingId=1008442307274&cpc=C63BD00756FD6F58&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-2b175f3b3a8b930b--6NYlbfkN0A5fO4kZ0i5MgKrbAdEq40D0tg6SlDuk-Egkj8bvC63cLOr2JomM3JYHktc3q9gHErUg2IX3Ly3dQBRnT8bPjKKEhHD8hlLfOheCqxerGk0wRWP9JJTJN6i7STYRAOw1CRFAGBUW_Io2SqR46slXEeo1edFVbY48elw1HLNc5rsj1RqtG5dtvmbcKkYTGBX7U-DhiyRkBacGOQw54cqpu_JF6phbUhaJ2FkM9mX1g3Q7OBUSMFr7vwedXjaNfEbdjBUWoT34-p9s_RIcSGriPloHSIyae0rrhlXT1Rq91jcrTVvdaN0A-UB7F-w9dgIrp7bhJuA473gH3FDcMT8TLSVIW8KucgIHDM9cb1_zuem4igVjU-nKYSut3cqmNXf424S8o5KDGLv8bQv9pGC7J-ltV1YXntAKAjvVblTMcVGTJLpaxyUmfpt8Cw51LFb5lzY7-hN-cE5Va40Yql6H1zOcO4rIMo30Du6hTA1zIh_1f3Jc7uBWM55Dp0xaIU9nUNiathYZcPmMhH_geQCO9gzO1v8K26jVG4UPZTPLvDEjTvFTetkOA72qEI9m_G3SzMN4UKGQ2nXsCw0RmBybyncILhtsegqWZA%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-12-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=207&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_36c3f527&cb=1676655359022&jobListingId=1008428776000&cpc=A356F292FF34F670&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-22fd83666225f294--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFKdzY5G2Tp0o4LyaMfO5bKfL7Rvd7atVOY6cQF40leZExtfPy2QFTsscpC88HL63XlGYjSFCy_T-zSiR1txq71SIpOkkHwFIgkClbIjkKOuYso5Qk1PmzD0klCpz5RVq8gCG3gLvBmUZLs6tZP28uCi5PDliATxIRUjFe5GOkQd9DP9zi7dNTt21Aa_Fs4uDODzPabU6X1ev9xVSG8IIc8FNHaS4aqmuHni4XBaacbIq2TNKIgC4jp4gkUAQmVWcMsxyfpDrXFqKrp-nly3scMfoi7gvGZwXvL4ihMF9HGdDpRdM6uDd_uvgtKH-68jPn3BWOjKNYyScR16mKvVBiIKqnBnyEJV7pxdVhv3Ub7lgeliPOX5BQJuw484d7apUXdqalE7Unta3vt9EUUrDKkcNbOMPD15vmQ2EP-tZwfvqNpgQW_omcbW5mMrfPdMpcSBfuDi9Cu1oeVNMWxPq_zF_to5MhJBywv4DvaXD0PHDVClaALSfexuHPXaszC7iIBzkPeXmBkNcclW9ZKq-kqOgGuLWu5TshwtyWjXw9C6PT6WXVNdDocaB5JddEb31--yz2BHkyQT4VShTLyDpQnmIuo_b0h2KXTnAI6cY8mscdl8U03OBxmijpl4nlMwv8Axd7qzve-RW4SUCLoJ7WmfDEZ278Rc6PYsZsVeVKwPRdB4Ud-tBDiW6PR-jOuxnL4a3iqXi3u8-gzK12_2OIwYrWeWEwj5JAdRBGS5wzocHHiBut710UL4fzCrwyUNS_xJ7ideLOlBY-zmjJMluTyOa08TXrKEQu4</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-13-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=208&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_4c47807c&cb=1676655359023&jobListingId=1008473993819&cpc=76BDADE3D6D9A820&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-3663a5e37dc4f188--6NYlbfkN0CzpLa9mlLn52PpffU7qxHEw8QQYomWWGNhH1LP6POHSFSF1upOu1fEHPPhL8kz4O7SL_xUAokqkuxL4BWfjEPMVqP7s0g3TuvHZsp8KP_k_l6jmPsrhuQ5YSODuu_RnOPE44lHcpN9YWnDvHUXKNub24oQxBMwQY6xRRLlmyCldR-pNTP38k7jQpa6hlt4UdadXpO6C26as03UTWhJdS6JQKwquKpooJrrZ3FNq3vGJS2bzInONF96PdmUbaOVRkip4TxTzs7gO_nLjFNLqM7SGGk3Cjm6Yh2AUiLvMpU2FMv_fkTjAM9mZfaUGyBzRlflERft6EIehsz6UVWCrWh2KJYR8K4CuWr4DjtcnknWjcJN35eTrReTGRcqA8t_xdHvtv5MTamXfZEP_ZwMgwj8u7JfrhM3uV3obcIlLfWAYz48cnaLgnQqFhNUBFxt7NELiVMbh5SN1QShdTTXNosSlZKWjKt_q7HZ3apcav3qn2_CoeC2a3bfmPV-OEc8y979rDJ9dMe3ZVP1XsZ2rkYhm9nRlK1zVyButA6uzU01YEvRPWqRX4R7MpnOJcZbsSg7xdaYL2jmJQ%3D%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-14-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=209&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_72468d0e&cb=1676655359023&jobListingId=1008409781492&cpc=A1F772DE77098288&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-9281613dceb23570--6NYlbfkN0DZ5fB6ks13DC-jxq_wMmewzRNuiIFDRdU-Fpp7Bd_z27LtdHxPYPLyDTnc_E3aO-478q7Lkd4tx0ubgT1n2vb7tLagi1ld8Upj2gSOG4U3P1OtB_zOcdk7nM7Ijk7gvNCmqHtGigLpUIBjhPPTbDy2JfsW_-q1L7mSyrzL8EQUnOLDQ3ds8CoXTMQY2tR4zGBalTohxOztAfw8xcltFUTyuHv6pqOdGgKmjAI4MSxowKiabHrEgaO2oiVZOuc8Iq70qXFEB4INPXziMR0jn1_YDsrwTpBstAIoXbOCiniL5ncqjnrkTUQvEfaoR4L31251QrWuAWzJP0SJ6cS872v6fViAyYp2oDS4FVXt3AYV1JZz5b09R5jZ9zGS0y6CgxR1Ajxujfz-itmuSVgDdk-ZNmxwkGS9xIhvj7u4zf0vpFKf5J4YkGfcbWmauM3LV73G8diTf8pYBDpYp5uR5eln9zPWO1XszbQBMW2BjKq5IUMjkHOXNYNCRqpeOI13YZ0P1XtCPj0BEXJTX9Ml5opIVWTzW_SZhga-0czhraKV_0bNZblGf0dIc2jOsDexUnw%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-15-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=212&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_11215794&cb=1676655359023&jobListingId=1008478811906&cpc=0C139D4CAD5A6DB2&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-0c4aa0f1c9a3627e--6NYlbfkN0DzGI0fa2LnDS7NRRy7kM5CIRuKffZgv9azrri-hzKBrSaJmZ1MZlKiz_1iMlEShN-zQXiwMIqGZHaWOFr2Pa64gFfNzoBh1HjSaFGbNJlnMnqNA0OhR-D35aWwfxuEZ0u4JY5e90ZHFv0spOgsmDc26GP0rsf0mBROzNRuLs_1ULX5ovkq0nQ9b5WTyuMTFgivhHFCKSwSDzmwDRISJtTTkbUmB24AZhPG5dwxi2uxGCegBy22BeVTzFyhh33tpbyhshclTouvpi7kv2RiysnoTggUShw58pxTQRV_Y_RXjI5zjEsHHxfQwgisHy7Obj4Ljp_HORKhZmsjwbU_rY2tg1BhhnVu2a5O4DEKIKDFkn4Tb1TYClPdJGN7YTe4lOHxQ7JxNTc3niGDCqZw0kB8jCSAN9kf-J3Igwyfokmsqou-8fkAFZABSm-9IuLGwjmbqPXqYmDNtmsuS8-7FPEDPc6sw3PCJ6VUDq0sAigH7Ykpzj-bO5y2_klE-mkMHPdnREVKCmgA32JtjaxkczK3d_0OWDzQabn1CZ5XZlT8ryFa2hDIn5CDzk_c33pT7B4%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-16-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=213&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_32adbb28&cb=1676655359023&jobListingId=1008428774465&cpc=FDA93C03AE7AED37&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-ea5080071b561a90--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw5olmPJnIU8hgGMSXBVmzX6IWBkHtWZnGtcLmnOJHvshIUtbyWOawKvow2oPVWpHbxjjQs3ZD9KvwMehiq9d0hbuIT1xteL7wqS6u0A0WTtH5C2VyWEBJZXUzKkD37BzTlxq1HVYp8kiiZ4oC7SVAEWdFQlwe6_s8GBn8qfrHuYEKxQoCDX_uAArgivp7v0wlR5Yh54o6ImcmhMAMtVRZBGDig2skmNXiYP_cstZX5wVaE6llMPzZVaEM7wMnwbp-Lk2mTYHM_KXRekM464Yr6EBDw9E8OXUbe4on9YA9ehCgUOQQyqgna1Dr0kCJyVDs5ji25Ua91BlFH4M_o8QMHadBvvDWjili4d-aek59zyJ2DIgOwnVuDfKQVbLSOPPm1hT_5JBtqAc3ReZUf51Uc96DuoarnUs_w_wf7L4ne-e79HQebPekcR1yY8IgeKGv_mVdoUl9AbP73bBwaPwrbXdI1_6v32QL0Eu6m8a7tKcQMG95Kj1KHsk3l3AtJ3ybSy38OGcT_VdOk3A7NHa-ErcZHdH0bJOgq9AGzD5XKmhecWoVKlVlm2Hxy0__e4jkcYRiP5gfBscOnB3MjA9niz57ZSWSBQBPIU55EU6W9RNFBQKZZjbOYNJ273H1X6yzNV6PyrZKlkOqUSszKU8CiMMraPPnVnKb7EvFcSSI3dS9Qp4KVfoGFbDej6Aff7N2dTktJ146zzSaU9X6YF_w0QsUfE21533WnuFwlSs_YJbCGceY9qVr_udBdThhTzFi0fOFhtv_wZDg%3D%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-17-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=214&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_0cb00727&cb=1676655359023&jobListingId=1008331611650&cpc=87034903B3AB482B&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-825bee9039a7c041--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw4ZXE1eK6I4yAQpvdNK__awFtXGQt5W3xHzQe16vrX95SH6GwW-GduiDbqXzYMuTzkaeThc2viNnVkPPKxusM0x6xAS6VeMv2jf3pP7V95xlpHtBi_IwDXWVXmep2zR00MgJTTxqT-aXPyh6LuiC88LvApOaMBvo13wqNhvhOXasjqiE6EvX_61C1nmZcH-CufXtsnpVFXV8NDTpEqFprKOyECiGqE3HVDCiOMe1oQoeR1IlgwFrS9w8Y32WM2qKxNPiPCD91Sg7EZAyS-XyIUgiinJ9KBNWk2UQeCZs1bue5HOI363ogmQ87BuwDlgJXYFZYhWjGPA0zrPY4Duqtpl0GpQ8483T8cR57n8tStO27ZwX7IhobYR9Pys0AjCkFgn7J6TM-VC0AHUselxZ59p7FLMUFgKv-yOWwdWOofO5ntraF5vT6NKxQbGrfNZi9g5lC9ZGDBkADj4iJV1sfhjBE5Sw0zECIJlMbcWJVYM6YBJvAKY_-11DcM-cqxNiyqBdD4Y6Evwslrs0OmQgKLx4k3PSf84VCv865PtjP5Ih6R_ygeWXVzhiPSfr466IfTa4-e0etsV6CaBJPYuUDYQH7QS5DNv3Ny-mRPBwGOunWSSWVKzgMLHwbk8P6wXoJOO0lZ17vsIZ_EQD_TPP_btZTVFR0pEbADKYG57gWBrc2NYjCyT5T7EnAiplbjsTeXLPQ0NTG4iTtN2LZCh50h5tGyCnDHy0JE7ThhrLkbIX_GqUrDmoBGuFjSRh5MGgr92gwAN_OYhyB98p8X1DHpJ4hb7ulDMtoA%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-18-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=215&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_f532270b&cb=1676655359023&jobListingId=1008428774257&cpc=6BBECBC74F3AC36E&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-eabae5b0f9ad7416--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw5olmPJnIU8huBTv0jxpu3Of4tIWL2NdCDr6UvMX-2p5GgllnPEKaYFmlRJ9QjsTk1gOUVmw6Al52apiq2Xm5wRGl4WrnrbyPEZWmV5FKMA16q1UJcTv5mogoBGVhE7J-hVsNpq8HXWoq0_I2XPxyMJXEP3xQy2JL5pox686WaDKVBiBfgyxWZVPtKplmPJo2jTVr1fCmXpxI7kYE1zejYoSwn27rzOqzWIFOnawvUm4AxO-5PKQGxs0yJ-_Vc9r8TwnrtPpxLOWYlTPeGRjblr8iytYfG522xCzVCCtkctZWdPfz45GQiUw4RfEJrpVxcNUE2lL_10GR_kEi6uvLfjCnPjEwP1E6im_DlvynkMPwPEtJ9nx9iWeFVqvlSGjvpH_U6F3nrCScshxce0eX4sXKfYIEw5WEv4-MM_fy8I2FAE7mw6bdcPrn-khZG6gTMFXHtvBPBHG4OFKMnwWrybXGsgCPncvxXa36Ngztsfaqah6vIbX3-ys6VuN3gkk6vNalalFADlBdRBL54dSswfUZzwIGNaDVV7yZG3C-f53zcDuZn-MjpdLT5tYpBZs2ANCJuiGN7b7eNI3rh0J1uGUWL3gNW9u09gQ3JU4_URR4LIczcgnnCxTlri6HiNKR9t-Bf1P8zY5PMx9nvSdvoTelLj0EDqvD4I_y0lqDoqhvTXB0NGnLIRdvXxPOALY8m3GiGQeC2BJkh_gI79jiDSnQsahX2d1Wocc0ITsosCLCa_FroLmJPhm1GOJ75sybW8ou41qWnjfA%3D%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-19-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=217&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_c728bbe2&cb=1676655359023&jobListingId=1008473536216&cpc=70D6958B2CFB98E6&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-bffcf3cd72ea0048--6NYlbfkN0DsGlZntYnfNLCDkxWKyeSlAU7YMYuzOayEf1PfP8gjyNiMz38T3ifnndKqpaTZ6GY8lFQdqU1qPVxSDuR-7SnLoSI3ufGNlzkq31wcGbuCPL8VgGirqkifSJuMZ_eMQ0hu8UKhapJOIs0cpep55E3mCxLH8d5CHmSOfsLfWyGcIpUIV2_e6dDbXoCz7vOprkmfPda-uKnU3zBXEJjp3VBth_TYf1TG8oOhPfkRPAhj43jNE-AM30dxjO1KHIa964BGDzp7Ig_JxyLuH5yKJT17BqrimV1Z7nxEGKODWDwDO2ZxKscc6KhtA44D5EJfW6Yrw1-okxsKoMkm34iVwhQefL-cx5V86x8xZryw399ehhedyvGq9Vex1m4IDhunrOZIEQtDw9N6VN5rwzye3yAm5n2ug_-cmh23krwaBrGTSNRPgaG1sjDC1hAvyc9h0lnEaCPDFsmFUxLol37BI8rT_m26XrPEYzltMu7ZhGUInpcITbqdeq-Ht7uML2HmPJ6gksetUN7gDMqXewSifHLcD-tBxfog3_yHUOU79-AOm4eQAStYjkaqot1dhTdgRNMZS00DDwlIjA%3D%3D</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-11-content-block-2-cell-3-2-content-2-cell-20-1" ><div class="show-scrollbars">https://www.glassdoor.it/partner/jobListing.htm?pos=219&ao=1110586&s=58&guid=00000186607272eba08f9fad0c67a851&src=GD_JOB_AD&t=SR&vt=w&cs=1_a3f5179c&cb=1676655359023&jobListingId=1008428776261&cpc=6BBECBC74F3AC36E&jrtk=3-0-1gpg74sojj47b801-1gpg74sp8imb4800-5755e665fc33c308--6NYlbfkN0AnZZki9slEX_z63wsqeqef2QbFTCLB32XeLZxhwflwiRdXftf8jmFK7AudwSoZPw5olmPJnIU8hoiHDhEXKJM2EYYjVnHiwGaHJL717_obUpjxWwmv6KmU8zVZtfBSPYXEFrk3QtZa7Fu9DeMsbc2W7GhghUXYXN_J_I7GP6JEY_a4AHfr8nEn0gL1vp535BevtzsH3UI776g3ahT_BL3hw-7xy_j9QSW-V290mLaSJ-YI-stup4kQdehqrNnJxRluStp4OSxA92mLrV75o6z5XZLp5-jVKeIOyPpiWPH8EGYEwypNDb867St7T_Ds_L2u_oYy3kHF2dl1RhYTCctRGy0xPL5A8STHk2RPuNyGow0zjTgGEnSWXoyor3ARAYGC9l2G2LeS_cIZv9jzoMQT1teKifnbIYSXr7q1K-P7s83qFaOtrZX8aOeUnyplnlBhD8YqZEyWTkSAKfSps-TanjrLDFBxvqGpB71rZwI469dfEKH8JdvT2j5MkXomszvufxfoBZveLbRZVEXArBmcNFJtjG68mX29xhUjiE-U3tZepYz39ov0t5M9hGU9Z88Pvln_Abx2OqJoloDUnNyWsR7wbc0qK7YYVTDz2SpHq_Bnqm1gsf2YOCQzEwP3t4DV6oPggS90sa9s68ximnQxJFC8DH3lnaQbZ-2R6DHcC4f_TImM9U-sUfTVXtZ6nQTSsz84A6Lr1CBYmYVfNv2IqMvqaKv8l320Lota_XANe6WJJnR2bsLC2IqlqXCbRXX3r21fO0liZ4SwV8lRfgWscPsGn89HUExP-dCGAeFsO53nc-xHQglW</div></td><td id="section-11-content-block-2-cell-3-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-11-content-block-2-cell-3-3" ><div class="show-scrollbars">100% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-12" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-12-content-block-1" class="col-12 p-0" >
+
+    <div id="section-12-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    job_title
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-12-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-12-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-12-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-12-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>22 unexpected values found. ≈4.583% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-12-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-12-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-12-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-12-content-block-2-cell-1-3" ><div class="show-scrollbars">≈95.417% not null</div></td></tr><tr>
+          <td id="section-12-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-12-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-12-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-13" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-13-content-block-1" class="col-12 p-0" >
+
+    <div id="section-13-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    location
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-13-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive hide-succeeded-validations-column-section-target-child" >
+
+    
+
+
+
+<table
+  id="section-13-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-13-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-13-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-13-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match this regular expression: <span class="badge badge-secondary" >^[A-Z].*$</span>.
+                </span>
+            </div></td><td id="section-13-content-block-2-cell-3-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-14" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-14-content-block-1" class="col-12 p-0" >
+
+    <div id="section-14-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    oppurtunita_carriera
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-14-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-14-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-14-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-14-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-14-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-14-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-3-3" ><div class="show-scrollbars">0</div></td></tr><tr>
+          <td id="section-14-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-14-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-15" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-15-content-block-1" class="col-12 p-0" >
+
+    <div id="section-15-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    scraping_date
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-15-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive hide-succeeded-validations-column-section-target-child" >
+
+    
+
+
+
+<table
+  id="section-15-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-15-content-block-2-cell-1-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-1-3" ><div class="show-scrollbars">100% not null</div></td></tr><tr>
+          <td id="section-15-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-15-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must match the following strftime format: <span class="badge badge-secondary" >%Y-%m-%d</span>.
+                </span>
+            </div></td><td id="section-15-content-block-2-cell-3-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-16" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-16-content-block-1" class="col-12 p-0" >
+
+    <div id="section-16-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    sede_centrale
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-16-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-16-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-16-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-16-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-16-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-16-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-16-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-16-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-16-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-16-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-16-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-17" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-17-content-block-1" class="col-12 p-0" >
+
+    <div id="section-17-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    segmento
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-17-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-17-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-17-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-17-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-17-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-17-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-17-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-17-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-17-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-17-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-17-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-18" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-18-content-block-1" class="col-12 p-0" >
+
+    <div id="section-18-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    settore
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-18-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-18-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-18-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-18-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-18-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-18-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-18-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-18-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-18-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-18-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-18-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-19" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-19-content-block-1" class="col-12 p-0" >
+
+    <div id="section-19-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    stipendio_e_benefit
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-19-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-19-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-19-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-19-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-2-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-2-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-3-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-3-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-4-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-4-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-5-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-5-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-6-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-6-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-7-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-7-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-8-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-8-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-9-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-9-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-10-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-10-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-11-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-11-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-12-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-12-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-13-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-13-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-14-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-14-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-15-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-15-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-16-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-16-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-17-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-17-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-18-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-18-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-19-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-19-2" ><div class="show-scrollbars">1</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-1-2-content-2-cell-20-1" ><div class="show-scrollbars">null</div></td><td id="section-19-content-block-2-cell-1-2-content-2-cell-20-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-19-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >float</span>.
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-2-3" ><div class="show-scrollbars">float64</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    minimum value must be greater than or equal to <span class="badge badge-secondary" >0.0</span>.
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-3-3" ><div class="show-scrollbars">0</div></td></tr><tr>
+          <td id="section-19-content-block-2-cell-4-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-4-2" ><div class="show-scrollbars">
+                <span >
+                    values must be greater than or equal to <span class="badge badge-secondary" >0.0</span> and less than or equal to <span class="badge badge-secondary" >5.0</span>.
+                </span>
+            </div></td><td id="section-19-content-block-2-cell-4-3" ><div class="show-scrollbars">0% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+          <div id="section-20" class="ge-section container-fluid mb-1 pb-1 pl-sm-3 px-0">
+    <div class="row" >
+        
+
+<div id="section-20-content-block-1" class="col-12 p-0" >
+
+    <div id="section-20-content-block-1-header" class="alert alert-secondary" >
+        <div>
+          
+                <h5 class="m-0" >
+                    tipo
+                </h5>
+            
+        </div>
+      
+    </div>
+
+</div>
+        
+
+<div id="section-20-content-block-2" class="ml-2 mr-2 mt-0 mb-0 table-responsive" >
+
+    
+
+
+
+<table
+  id="section-20-content-block-2-body"
+  class="table" 
+  data-toggle="table"
+  data-search="True" data-icon-size="sm" 
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  data-sortable="True" 
+                >
+                  Status
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Expectation
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Observed Value
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-20-content-block-2-cell-1-1" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-times text-danger" ></i>
+                </span>
+            </div></td><td id="section-20-content-block-2-cell-1-2" ><div class="show-scrollbars">
+                <span >
+                    values must never be null.
+                </span>
+            
+                <strong class="text-danger" >
+                    <br><br>257 unexpected values found. ≈53.54% of 480 total rows.
+                </strong>
+            
+
+
+
+<table
+  id="section-20-content-block-2-cell-1-2-content-2-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-20-content-block-2-cell-1-2-content-2-cell-1-1" ><div class="show-scrollbars">null</div></td><td id="section-20-content-block-2-cell-1-2-content-2-cell-1-2" ><div class="show-scrollbars">20</div></td></tr></tbody>
+</table></div></td><td id="section-20-content-block-2-cell-1-3" ><div class="show-scrollbars">≈46.458% not null</div></td></tr><tr>
+          <td id="section-20-content-block-2-cell-2-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-20-content-block-2-cell-2-2" ><div class="show-scrollbars">
+                <span >
+                    value types must belong to this set: <span class="badge badge-secondary" >str</span>.
+                </span>
+            </div></td><td id="section-20-content-block-2-cell-2-3" ><div class="show-scrollbars">0% unexpected</div></td></tr><tr>
+          <td id="section-20-content-block-2-cell-3-1" class="hide-succeeded-validation-target-child" ><div class="show-scrollbars">
+                <span >
+                    <i class="fas fa-check-circle text-success" ></i>
+                </span>
+            </div></td><td id="section-20-content-block-2-cell-3-2" ><div class="show-scrollbars">
+                <span >
+                    values must belong to this set: <span class="badge badge-secondary" >Azienda - Settore privato</span> <span class="badge badge-secondary" >Azienda quotata in borsa</span>, at least <span class="badge badge-secondary" >80</span> % of the time.
+                </span>
+            
+
+
+
+<table
+  id="section-20-content-block-2-cell-3-2-content-1-body"
+  class="table-bordered table-sm mt-3" 
+  data-toggle="table"
+  
+>
+    
+    
+    
+      
+    
+      <thead >
+        <tr>
+            
+                
+                <th
+                  
+                >
+                  Sampled Unexpected Values
+                </th>
+            
+                
+                <th
+                  
+                >
+                  Count
+                </th>
+            
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+          <td id="section-20-content-block-2-cell-3-2-content-1-cell-1-1" ><div class="show-scrollbars">Organizzazione no-profit</div></td><td id="section-20-content-block-2-cell-3-2-content-1-cell-1-2" ><div class="show-scrollbars">10</div></td></tr><tr>
+          <td id="section-20-content-block-2-cell-3-2-content-1-cell-2-1" ><div class="show-scrollbars">Franchising</div></td><td id="section-20-content-block-2-cell-3-2-content-1-cell-2-2" ><div class="show-scrollbars">9</div></td></tr><tr>
+          <td id="section-20-content-block-2-cell-3-2-content-1-cell-3-1" ><div class="show-scrollbars">Lavoratore autonomo</div></td><td id="section-20-content-block-2-cell-3-2-content-1-cell-3-2" ><div class="show-scrollbars">1</div></td></tr></tbody>
+</table></div></td><td id="section-20-content-block-2-cell-3-3" ><div class="show-scrollbars">≈10.762% unexpected</div></td></tr></tbody>
+</table>
+
+</div>
+        
+    </div>
+</div>
+        
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

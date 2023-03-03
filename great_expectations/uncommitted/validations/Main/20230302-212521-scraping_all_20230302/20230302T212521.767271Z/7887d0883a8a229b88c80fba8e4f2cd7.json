@@ -1,0 +1,3111 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "scraping_all_20230302",
+      "data_connector_name": "all",
+      "datasource_name": "glassdoor_scraping"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230302T212521.790101Z",
+      "pandas_data_fingerprint": "8472fdd905a2339ea46e2c2f26b5768c"
+    },
+    "batch_spec": {
+      "path": "/home/jovyan/great_expectations/../data/scraping_all_20230302.csv"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "checkpoint_20230302",
+    "expectation_suite_name": "Main",
+    "great_expectations_version": "0.15.48",
+    "run_id": {
+      "run_name": "20230302-212521-scraping_all_20230302",
+      "run_time": "2023-03-02T21:25:21.767271+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230302T212521.818879Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company",
+          "regex": "^[A-Z].*$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 9,
+            "value": "adecco"
+          },
+          {
+            "count": 3,
+            "value": "21 House of Stories"
+          },
+          {
+            "count": 2,
+            "value": "vapore italiano s.r.l."
+          },
+          {
+            "count": 1,
+            "value": "bittante"
+          },
+          {
+            "count": 1,
+            "value": "italo scrl"
+          },
+          {
+            "count": 1,
+            "value": "koko art"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          34,
+          51,
+          88,
+          89,
+          90,
+          98,
+          100,
+          110,
+          112,
+          119,
+          126,
+          139,
+          142,
+          156,
+          163,
+          165,
+          168
+        ],
+        "partial_unexpected_list": [
+          "21 House of Stories",
+          "bittante",
+          "21 House of Stories",
+          "vapore italiano s.r.l.",
+          "vapore italiano s.r.l.",
+          "adecco",
+          "adecco",
+          "adecco",
+          "adecco",
+          "adecco",
+          "koko art",
+          "adecco",
+          "adecco",
+          "21 House of Stories",
+          "adecco",
+          "italo scrl",
+          "adecco"
+        ],
+        "unexpected_count": 17,
+        "unexpected_percent": 3.7777777777777777,
+        "unexpected_percent_nonmissing": 3.7777777777777777,
+        "unexpected_percent_total": 3.7777777777777777
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_title"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          9,
+          14,
+          34,
+          35,
+          41,
+          44,
+          51,
+          52,
+          55,
+          59,
+          60,
+          64,
+          79,
+          85,
+          98,
+          100,
+          111,
+          166,
+          173,
+          175
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 38,
+        "unexpected_percent": 8.444444444444445
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_title",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 38,
+        "missing_percent": 8.444444444444445,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "location"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "location",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "location",
+          "regex": "^[A-Z].*$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company_rating"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          3,
+          5,
+          7,
+          8,
+          11,
+          12,
+          18,
+          19,
+          20,
+          21,
+          23,
+          26,
+          32,
+          33,
+          37,
+          38,
+          40,
+          42,
+          51,
+          53
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 201,
+        "unexpected_percent": 44.666666666666664
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company_rating",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company_rating",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 2.8
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "company_rating",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 201,
+        "missing_percent": 44.666666666666664,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_age"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_age",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_age",
+          "regex": " ^\\d+\\s*(g|[dh]|day(?:s)?|\\+)?$|^Oltre\\s+\\d+\\s*g$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 5,
+            "value": "1 giorno fa"
+          },
+          {
+            "count": 2,
+            "value": "2 g"
+          },
+          {
+            "count": 2,
+            "value": "22 g"
+          },
+          {
+            "count": 2,
+            "value": "28 g"
+          },
+          {
+            "count": 2,
+            "value": "6 g"
+          },
+          {
+            "count": 1,
+            "value": "20 g"
+          },
+          {
+            "count": 1,
+            "value": "21 g"
+          },
+          {
+            "count": 1,
+            "value": "24 h"
+          },
+          {
+            "count": 1,
+            "value": "30 g"
+          },
+          {
+            "count": 1,
+            "value": "4 g"
+          },
+          {
+            "count": 1,
+            "value": "7 g"
+          },
+          {
+            "count": 1,
+            "value": "9 g"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          8,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          24,
+          25,
+          26,
+          27,
+          29
+        ],
+        "partial_unexpected_list": [
+          "1 giorno fa",
+          "20 g",
+          "22 g",
+          "24 h",
+          "30 g",
+          "9 g",
+          "1 giorno fa",
+          "28 g",
+          "6 g",
+          "1 giorno fa",
+          "2 g",
+          "4 g",
+          "21 g",
+          "7 g",
+          "1 giorno fa",
+          "28 g",
+          "1 giorno fa",
+          "22 g",
+          "2 g",
+          "6 g"
+        ],
+        "unexpected_count": 295,
+        "unexpected_percent": 65.55555555555556,
+        "unexpected_percent_nonmissing": 65.55555555555556,
+        "unexpected_percent_total": 65.55555555555556
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_link"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_link",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "job_link",
+          "regex": "^https://www\\.glassdoor\\.it/job-listing/.*"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=101&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_c0bdfc20&cb=1677773163325&jobListingId=1008500360715&cpc=7F406056C5176881&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-828f185c22878721--6NYlbfkN0A8zZLCnFz4bHVPrYm7WniGy57McBVsRCsPeRASLFxRLHgrv3DhLO4uQizMASh4yY1YtZdvJFNwFqtgSLTq1K3h1VGt-s6R7c9GxVdfwO3UVPZ778PltEXLHcLCKW6tcP6lgxZI0MHTiAimIWZaJlnwfN5H6wdK9OpvjUMbOE8kjIOV7b94ej-oRoN8P68WRKHvzlQ8xMfn1LKVEpTZQbeDfxisdPZ9x5uj_MpgMMwWiT5Ywe-7DgJQDKW-DP8qnumD5zozJYi4NlhyopoKseb3fYzMvS5BQm17inlrQ-oRGUsewff4u5qMQZ4g4elOdW5T5CXShsHJBsBkpvSKkxALCeGstKQWrXwlJUUjwegQW4fvx0kfO1oJBDE3pAv5PRXEKWUIhktLKrrV6Ap5DramtlFJHBuuwWpPRPC81uSg0faTViTEzfMs7KJ2A5pj9FyWKogpOiyHLa0d5JyeHw1KihjwM0tN12odhMqddzhOe1EfxRAj3hxMRIwvchCqbfUQGWJWtEyfwVYwNPw7ZzGfXk96ZlHeEosAIZRcof9RaGi7zgW3_FT5PSGA-1s2qT0u3-Aa_SWa1g%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=102&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_2d3da3ee&cb=1677773163324&jobListingId=1008461916045&cpc=2BD45BF6CF113D42&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-ecc4db44fd6592a5--6NYlbfkN0C8QiHF-VpbPGOg0smOOQqVwrKdDq7DnZCh7Jza0x9Ez_d9Ah7m-TUJ1tMyW2Nvnfg9NUcCvfaYsb3wZnzIE1pRsTnKUhj4HhftQoWhSrURXGQA-EC89YBtgnZAJqfwNLXGkNv5s03HYVZAFUGFeKzHWccoNX_kuDd97hlDmnn5oSJMknoCfSQn7EtAzOfa30r6TEibHPg7s9T09p_5cPCrw92CCVEy6xc_nS7E5TiV1jtd8OjZV_gtttDSGuCx-kqDRsSacfHRCyLBHdlZWTitSRx7hmJajXDIHSSPoFi9pi1ci3A1cjIIaXHnWB7VWxuA5MjlqrxUBF9JWnHmMWgq-9M91JZrpo_qv93IzR4PTdosBFHRrFJQcfwudycWL1ksRqY4sDPVlLpg25_xRHn2wKbisYdbwoj0CX-ux4OD7GcGU12iD_bWwxjBSq3bfmBOgDpeW5EXBUaj3o-NMCk0Yri6axWpoSwUUIo6DaFcndd45MKV1dJoIbr3hHaU_8Akkx8DhAGNO1QymJrULQPSjULrWnWF0EjCqzIwv8bA6bGMDj1hi6TVDKXQxoUBx-uJ-eqaMoJBJ05D3fqTyIvsRyHGah6Gj-47wwg-6JHUD-Vw6kqSYpVQ"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=103&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_8f2846f4&cb=1677773163325&jobListingId=1008126673535&cpc=BFF9BE5BDD8EF644&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-3b99b2c0bcca88a1--6NYlbfkN0ADNS7S_bk_QaI_CrwlsrYCPwIxhEPqbKfSwismzAhKFhAO0N3pd-3m-Hhb25tIbeIHmeXnRr8l1RDbIDgAz_e5fBNowGT9DWL55aVj5KkrZPQZ9oc--tEO1Rj0XFkgyGJzoBVBRxY92ds8RBAl0KnlADDlqO3cCsh4ErEP73jX4DNe2hLmbK1N9YKL7Stbzr2_Gj-UwcCxv-ULtNYb8smWQtV9uHL2kvlv5bwiFkiolHxsovlo0_muAJSgpLI34rcBI60LBnLBLMLiT8YpqqZc8P4iT4SFUS_iCkAdDf_LEJppf8pIK4tl9twDTmbx6WsM13VKcj3ADJ_WL-Ra1XlP39MirbrP40RuGBXZmJHNTzz2KTs1eIjhELvPpo_b6hUrubbzNtWbuFvpL8LBa2vPck7zkWeY-8QvmmPIM_94taREA58nChIDjkDU0AJU4yYCXAR_JbUuH6dgwy-B2Z_ENzIv0PSuv_PWNFog4e9-yoMQIZdPEMc1UvUuznfFXqe8L907bAjRDgeBqpn4BOCVhNwBwHQ7eARMjwgx1jGXdZo5W4J478NLbBBiZpkyghWxssvixH2sznIV-JHp0JlCdbJid3A8IWqbsJLko8Yg6RDtBtzRobfAoi6qwvfd3qExPYTkzNQGR6w1JLHsEbxQI4ZF8I_opj2Vtz7JfIQ6d1f14Zgyusm7"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=104&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_c63528fe&cb=1677773163325&jobListingId=1008458692778&cpc=4A43B94DDEA77FFA&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-30b8437e75e27be0--6NYlbfkN0Bp-rZfZF3PCE-ZW-EKgdmu0IFY3DGErQESS7shdDIG5H7cMJG4KHhzpznkNwdHifaoLaEwCybJ1traCy2Zfc6YasEH-0MdU5w4iCRWd52HubwvnHcFYAaU4iAhP9VYxlksUXBxS7PwmQkBLmLeFdxFTkpe-4Xw7OkOppkhVS3xWIGPu_EfwtBsV74DNXlNZegRKQMrFGAw6hl1NJigXspubr-k4yNzFsA-PjnLEdxjv0oc6TIIbXjXrkiRVYbnbUQRoiIo6wtVoJnqpk9KbErxRpwBV6-iBVIEvWX0hVLdHYYOnqMkvL9zKzUQ0zXJdZL_Mv8EFASjsX3pflMhxai3Ac6THHUa_Ow6FsA7PdL2yJyq5Pnwtee-19HquAB-EzcOHPHW5s-bgu9L3bVDGmrIaamOtF5Le-jWi2DCAWzpFvFN2-OTl52Ql4ppuIIXAjWEFu2yJnTRiqaNcZoRpQGVubW4V0uHS6Jstc_F4FvfBx_cnP32-IXla28Bjpw5ObJGjo3RLA5GheXJSCPmhTwVhBj1c9BQtIyMt__Iw5kSszs0CGMw9klFhC20IAg2zUQG7obcdWfyT6UbyXhv3B9RBQtGPZXYKzgqg1ou6gdJDhOnr-fz6v1Basl3fT8zSAocTC5Sld0DdA%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=105&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_0ce431f1&cb=1677773163325&jobListingId=1008504227841&cpc=B27F49C9D64D6F84&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-ba68e2a2dfe69da0--6NYlbfkN0DAv-knXWXtWP4BSZ5vXP1CKdoDUf5S6mXEs2UdONmIWlVd8a84ouEntKZlEKwwLXMap74mXn22f3CrvRUQLezoIGjF7mJiLxuDhN2nfPChQDVBk1YCd3V1AImxaIMgdkOb84EdA4NOYQVdCc-GyE9D_ShuvLqRmrIlPV6-0iV-JtOFDKJ9nhpE7lY3-heg46hrjwCREgSiQubB27B0Cht8iSevjyPQE9ZHUdEE-Lbx8YDHFkmiyD7R_n3imbsIiQD4vxLzlSyu7CozYifnrGGGWEJZU2ZSSz0p3Ec8frwuObe48Zn7RdBdRVLGxJj_89VL5qRo5oZnAoTlq-7OotRrB05Y8wuw0qlnjUKAIPE56ZHIJpPuk-O3NaKySjTrTcwJoG8zBVZwCrAsrnR8qVN3B6iMUI1t_Zu_X_XX7XXR0jjtT2mxsVqzn-SrP3KQgVAbwbrD9OWsz-J16gPE9YTl6XRdOL1JdjdueB-u6Hzb_APH3SU9c0rJByZds48H5qxN-ttVaKtNoIBMe3gGW7cbe0ZQS4d1h7t4v7uIIzRfKAGbtJkbMpERYmnpWpfBGfmcE_1NnH3KDUw3Oslffd4LObL0LsfoVlVp1wVw-aEQavpmVS4Q4P6FV0YRB05B5eU%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=106&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_6a989184&cb=1677773163325&jobListingId=1008113524129&cpc=E509DD49A6927373&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-c79c6dfe4327dfbc--6NYlbfkN0AC9MSsTIhcv6PmN65MnPo_6iLm1aJGusVi9wrBfe0C4WprYur0KV_5gZUgxQmpKgqX930_WVcnLE_QY-tcYx9SCb3AF627B0Sj55x7uhQGJuV_usniJ9eiIsBmtFj9CMoVlbxijNBxPsJfIakH9x0kOKBSRHC1r2n69BWnduKFg0Pu024lF3iN2wXJ9mpV8Eja_aK85atEDtatWZaI8a0Yq-0OFWpLaat2lzfuQZ7NXPulKPz1cQ7d4FM5Lpxd061S9rjqG_K5K6g6OuKBX0ptvrdZ_Q-hHMYrhQwZGTz67Lv4T579MAJ0ZHLzRdv8ZaXipYwzqAeysp4xvUd4_WP8M77iwhqcUWItXEet2Z_ecIaNREqP6kbzluKVxlZKWx7d4MPmDJqbfyIINIjVGq4iOu1Oy_F3p23Ml9zKbXm88_yO1s9mZ2GDyVA2WPZStIRKiSEnP4PDW1-01vgR_41b_Hyz_CKvC9w2R6MU2NlGALHPl_CkUP_PKrl9F4ozlm8Fy5i0bZ7NQklFHaYMoU2VEXcQYk1yjNNcMnR2eHhFIbHyJJmONt7i-72KYWLbzRyFAd2gwY6eKzCbQhjSwqbR-rZWGQloZNo%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=107&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_4da1e758&cb=1677773163325&jobListingId=1008439827981&cpc=009A9C8147DF705D&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-85dcd48569191942--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz8pEuTT-zx4oAb6xJhTEd69HDae6pZt4hxqT4I0egwEZPTm84FymVg_YLiaDcMAM0WHy-t4c7IOy07niU6Alq1yVA_JB4j-o5bniIspSvUmXu48qgVBtZ7vAdy107ZeRi2BOA2EWLF3ytDnlswrqAoJqvq4JPNmsefxz7QGKztinOdsq74d-2cepmP7GszEqtr-1ef-bZuxm9WITi7YiFcGN_i00ptRbcY39VugoJ6ewrTJTl7adDqBhhOhaIoE6fa8Oe-XjZXcE4xamC5ja9xgjIIGrTHS-lDJXnF4UckBt2gL5e_Hp6AJESolYzwv0aUKcJFtd4iCcU2z6690YvyqciKjD65txGqw2RiJIE0uHQ_sK-W4hX4POL9wJSKmRVHPt5J-g4NU0AtRp_wnUerfV1c6i7OrGTo2LJ2PYF20IVfTbjYCDztGAnvC5GYxe8sZW4J6rViDSV4UL4lB0j-HWgPatsCkkE328fnJ1AWclwFVK-EgcErkA-5D6uf_yudg_h6FPKYIkHdqIw6lWFurHyfmgiVymM0HFGsSpq2NKFjPrfJfCZB"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=108&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_1e54753a&cb=1677773163325&jobListingId=1008423732098&cpc=21001CD36CB5FE0E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-22cf2b64485359aa--6NYlbfkN0C0_pO5fwfA11ptQjlM-eoUyFF-RuimpG5Su7y4ibtR0s8fcfwGh8I2fvWkZlg-gOGVDICZRNf4iIotfulB5VOZCUSM1_9tXNe_FZy30M_f7s1WvP6RCMsyc3EsyEHa40TWCYKC1wCGo-Xm40YDTW1Ij9rmGO70xq42aFA5N3aSnDB7t7AK1aH-t4wxzDjm39euboRHEyWCFjhSOVnPTnIC7oDq8N1s3Ox8dlsKp0YBjcBNjk5be3elSzo8mlWRLt8VIex2buS7FPFl8ateHPR1xvxjn2nsiPUaO_fwfkrPgF-PuuCwukAZb8c8Szs09bTPQPJbzidmAaxaTkR8vUwEKXkTphhfo_WU-pQcyJet5K2GkYxtyD8987HSzw_WuDZLeidMgrStQpnFJ1kUwmQbniRpYbltwe6IseX0GrHfYbb7ESA0cp6p8lw9s2Lg-Tw3lIIR8D4DJYaWq8s_4GXb4JFo4Lzbgh9Z1AxyFTaM82yaWjhTV1CZqT7D5POUg9ziCR8K4iJCkf1a93lJsgLa9h-L4aIMQPYwnKFa68orA35GiQrRo5VWuLKNLwh1mR4PS2eSuUigrmS4GOMjB3x3-n9nFfdV_0Q%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=109&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_c1c6582b&cb=1677773163325&jobListingId=1008484471573&cpc=022796DF6CE1C9E6&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-9c679442ad160d27--6NYlbfkN0BMmVSGRmNpA0YEhBnXnr9Ec-FDNOXP9eUozoMEMWrS46TVeTbeXF9DZg4hBNaOa5JdmIhj-ShrIdKuUn7OMK6u35XsBh6WK9UC2T_7AOeuKBTnAZpeBZBrTXWHfa3ORnADZvvZkMnEj_NCqbIP50xvSQL7mq4ca3Dw38yosnBOl-DHCK2qu5J6RqO5c2tC7mET6I8iyzvtyOy8ifRd4C5lkAwWvNiKxgTHgduqFDA5knW8m-r1nLkBbe2v7_MY_DqiOm0W8-5cG0zM1f98Zlg3QH0vMccuurx0yUWpYH5gS17I6j6vn5AilsezpZmzZRfXwxo12x6D4tM7qwOGFVqt2HsXiT81VrchZbd2GV4p4AE8zvNCPPaRaR5Go_KYQeaDqE3pprcT8mDBHPGwlbNTu8P065crfByydE-0Fkjpafp3tWcfZsNUBYGmUu6BnvbtzUCaqgKRmWR3fxgM5TXKMSt-HE2pZhyayGwkjfUfH5h_DExEeIbBweM5MpqOWciheEsSEVstxtZtXanM79-wOdcALFNebnoGL2uAsifU66ERPAgnkfJuUafY-FUkeIC0b2z24lqa_su1pFQaALrwLV7aiknOJJzpYqlxQtges2ivOSlRSqfmDLgL0O8-7Kq8tcCFlxBdBA%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=110&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_daaba409&cb=1677773163325&jobListingId=1007243344510&cpc=E6B95A06C1BC174B&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-1026fd492a16775b--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz2Mm_nTByEclbhMbXDir2bUdFwx_x8fYVYj766ChpBf4mya8_IUc8RA6hwLKUWFEWxCnmzwJiY9F8P5nu-W4pt8EuJKQijRya0ULCFuvo7PFThliZgfdALmvUmxcveoj4S0tPrDJ__ezSCYLMV8lYNQ5PG-o2CWUAneIaJQ0l1CfZ3BfB9sQBUaX4N4TlIxTTpQ4rspBxSfw6JTMi3MNGkGazJQfsYDPf2TeoUP0tKCYka4PqJmLka0eD2L8rZ6MnrSrle9EjOuikiHN2mGc8Y59MjHZ8jqVY6mrwyOO62wBObrJ3NTUlhW9We6_nKqi4Of8gfUUgY3ae_XtiuIXbKOtYKjGI5HxSMn6eh6RJL85h6Dha-e8oAAVsdmvghewKNb1B2UeETj-ssdXUp_o3OatFqUosQS8YZD178JMsvn6rGYIaR85JhvuYRE66KLVloWSqn4SX68IelI8oZbZMVQLiFHe0qY8ihTXk5SvZtXDLKjQa1avFZqOZJsgWiPjuiXUk2zPcgvcGmTfWo0iafPh9n1-QdO7qHQJGlN-9RozEu0A8WiTZb"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=111&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_da0c6358&cb=1677773163326&jobListingId=1008500373995&cpc=5C70DC7FEE0D01B1&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-2c3e232ef9d6566b--6NYlbfkN0A8zZLCnFz4bHVPrYm7WniGy57McBVsRCsPeRASLFxRLHgrv3DhLO4uefwcTGcMVZqGLRQnMMmp-fREl-5hZPuGE1qmunn-Tl8sE3hwxAh2WJ4v79p0HTC1X045gYDFyhiEbUJLkaa5rCb8xUEcfHqhAGzFBbRe2PwzjFNFzZxCbED-FwmpYyqIGmp8_r6o3yJSGKmM5VyEYfplOfRnUyVXisVOlRvUID7xxQmamIDldjaeFGgDSpzXZkbheTH1wu3xoE1Vua-Ss77H91-f8AcHuBpWTt6maAtO8-H0kgduxPFqYwHYfnWuJuLBRQjc8hU4W9wW4peHEUqy1QSw58yGI23ANXJcnvHhD2uqTucQGCkmDr7aoX-oyJsHqVuBux-oJ8UHLmWHMJUdjkYkvrNgttVCJ0o_9A302ujgk3IMd6_rO5hyXWaotuR5NONKGLZrQFdLck0Wzf23eG577ypuEw1JVyKPdgz9iVU1YDvIMtHbneX-rChvf63E6720wcAWPKoP5XWPkWbRs2Zd3vWoNaeVBwqh9YCXFgAkRwQQAAnXGoWc-9ISU510yMC9RoL4n_qndtriMw%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=112&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_1ac11462&cb=1677773163326&jobListingId=1008446555860&cpc=E04C949A9101C6A2&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-89601602b8b75507--6NYlbfkN0DBH-sv6Gy7PCakfSsP1TxCRndZR3GCgrt14eTu6xUDZIDIy9zq91-EfIYhp1NWjOrODxaX_hBNcFYpXovjWebgaFhjfARcNVSAluaMJPTVMzE7jm5brRwCkfKdfrjaBfjAYceF29nRf75xywepAs06ypR-P0-zhmLbZmfvyhWVc9px8aXSjjEdsBojD7ABYNXqXRWMH6z0gvFFRc7ioNHqsfXIeytzBguG2q-1neAVlwFYD3w8PJ8YgfJvmegkuhcu7ifgsH8qNHcvrYzdbVzO8scnExfOO6mtJLzTGyXYlqQU1s1Gf2aca7h_ClYR4eUPcHTsHJBkEg_rQwz61AnOjECbxqIJPZcEdoTj8PdHruhqbdN3cH7UuVUu6zo2mQJC6_VJUHs_is0eEitnS4IrUuv1TJycxK-CH88NO2EckbhL8Rj0xUVuU1ThrpAlNB3h3vCg_NpZ0_A_a_ynUUs7jhL3M15coQhhxDur2RaKGBKn4m05uzNLB5IbQqbrubWe5XW8Yrskz9mFSt1Bg6Od0aWn7HfPRjoQxLyBjakOWc022d9KTuhqW69kgTWxmYE%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=113&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_595175ba&cb=1677773163326&jobListingId=1008376794907&cpc=EE7F0D06914A6BE7&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-6fb3ebac12bf19ef--6NYlbfkN0CAifU3EaP-5lPQwwWr6ePw8NDlBdExlfKMA8e5TseVQJUKpNI0GniBZjprQTwo3KzqMOGlPp2sBfYSZgxN6zcwjPs37b-4JOlOmeyo0buZO3hQ8HWWdy7FOgkT1xuveBEgrVc8HVOC0IN7G8j0lSbR3qz0PHr6T6kz0rrtVc7PfIjaRPMxEhK71tSnc2Qfps39WVXcUJqqpjNpGMRztQc-tcys3513_qBXVLtSUX983erVhtWnXyM1EU8UjXkzGKk-N7eVWT5IYNvjKZNmlYQgFWti0BiYNzEBbdCOKHe5CfRb_odFsMeZxchy2htudIOIrqVrmWxOy-x6_gMfiQi8L2Il9F-WgNdLSjSOcgbLHSWAACBpdUel7bEX38bulUWnFwYEazl2Rq22lWmj6DqRs8WCT5mOLgjWnjQWVBlB9dUQFwfcltMoS8vKkrVOgWa-wJFjZxOEP6SK4Zf0EQrr85xoIxu9E89Mw4POxs05Kw9F8OTfnddRJLa-ZUW5yKsGUwx3CGnhEYtveObUO9K7CJSfLhouW3E4yZRBQpMeDe9U4EPih3Vysw0xlbSXbjn0zuxjQdz5wRnxe8ARNQgh"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=114&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_9ed0ba33&cb=1677773163326&jobListingId=1008151500873&cpc=F0881FB4B112A732&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-36e6199e4309bd94--6NYlbfkN0A26axkHWDAEqorEBafURBxTlj_DeaXqTx68C6FuVLLZI91l25ryG55dPh6ieBNiudhINRY_acxi9me5SmYzd5gilnoc231tjACRS3l8YvzB2OiLubACcSMGo4lZoLXpp2ey2aWWP6t3QxzOQRu4Qp8h_XxkmirlXA5DBwqmSnrCfEATEhIh97iwL6qDvFQuhCDISgFDMxH0y1qT6SvKExAKlUJFg59aOx3HAOgqreE4HYSJOlAa2qKhYt2DvRRMhuBxgMSmZuOAZ3XBHq8Vl4XTEqCUXF2MRVShuH_ff4k92LLZB_dYwyQThV0AS0Jad-q2eJ7evFVZqgDzWSa92TVfAmqjDtgKN7V5pbvk843QgbqO3MzbBnt35kTlsd_OGJxtFSgE9v5dz4zk5c4-ZscKgYK53norc9ic5ljZmQANeTpoNEDaawC2yr9I9tuf_dKI2T_PgAuolQ5t9cR4nC-TLa_Ulg33K0r9F7PZoGj43iqeaEUHtdq7VihbKauWZuTEO056PIaB9b2qMtt-tegaTUqQC6l15MUwJ6g-LHecO6Gb1eP01lrNgVuw32tojaNWLBjgAnOqnF-xcS1VHsAVbBc3MzTlt78T75xIoAi3_xitGBkb0RAdRZIS_JV4GQVFfBxPtPHajThPf7tw__ojBlM6cUfmHQQp5Lmf2vtWwlpRc_f8KcNTN_USYR-KpO54PTzsmIKVLC3aERaqfpFEBfWpacOO2ksJy5O2pLesovzbU-d3qJyId6Q006YItyMmV89WgAl1YjQyfsdiKs5cRCSwhZtltQq_qNsiyP8xuzdT_Bo6ohjJUgnObHoEk32rZlZ75F4vYDbqulcv3tubIAtFdcydOhKnVt8EQ_cU8Ni-YuPZobi0dM-cqbIeor4_kMc1_P4v4av3Hbp4z5DEn6VlVn2NmPNZjp0-pv3F3nil8YnBxnK9Lbo2ojFm_kna3F4NZCwfQ%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=115&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_d3e19ea9&cb=1677773163326&jobListingId=1007243344715&cpc=AA718BBA0476CE1A&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-fb8f3c30251653a8--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz2Mm_nTByEct4PE9wYElGOQ6YXjP9hGB6m-dKLcfGiA6FJe3ttVg6LW83491ufnDB8tWYasBE0ce-efzTfR1MqMQApFI0Y-U63UYZFUTYJKUoJvj_1ukHirOKda8ZvQk6zIS6IrGdnCaxX3holxT8z4nVn3rytizsZM96YXfBCPpX3GSQ_mmraT-7o-grS-5Ha_MPilQwfTq7OnnWpAPKwe1WJCpjFCQdX6JesJqn5C2trMke-1wvSL7lE9oJBVuvhXoBf7V2poxGWKPqgCpU-daZG6P1H1thC1bBZ_VO9ituSI7DrM2CpbmUnR6RwOpJxVmfqYPaRYydP0Ygij49KQDnf-wYVcBcVJy3xIxDeVlmlRV1wcpSfS8tgNKM7eWcaeTC47jmgx95qwnzsNovRIx_YoCLvzMaQVOoP4rdQP0vgmk7VrWsca0fop3gjlQjKNJlnyWR61aLoCXjlfTBahU1zhxWl4d0SD5UrLZSjX-Dj9iW0gj2uPBTIKFeTgiPlY2fXBJTUmZ4_i9wx1-gaVGilii-G-SxgmVcRp1vFBPCjDFDiMWUg"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=116&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_e1d3267e&cb=1677773163326&jobListingId=1008490950026&cpc=9C4F014304452074&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-e25a268ef5e894b5--6NYlbfkN0BnrGlSDnen0QF3oGdbTpIwpSTLOTcqkZZKInyhNwmcgRgKoaoztMcZg4wOo4tMM4-_jXQKbS28apv3ugQ65RVGW6X4UWYBZ_0oj9Ln3t3sgk8dACT2RVfbRcH787qiqqOT1_v1JYiPdRZcGX6m2h0uAi_K5X6gRNHEip33zTa2R4zPJZIWi5erwaiIGYc-KWdnoITCvXe3ZkQibOr3VkhwoE5ZVKsggFNspqnVZQgoNv2I6Z8Y0g4jMmUdAn8vfkuGRKMlj_4r5vxwrirA7IOuAs_ccqFqL-aHU3Egh9hjN4FtJ2JKWBDugrR8wleNT7PaMQ92evDBjCtwmPUXw2f0NsJy4T1eNoceL8vKblSfYWrL39O1xdpT6a3Ku1vTUGKKOjjBM5VoF7Bkt3oSk4vffSpIJ5TqTZLwcspK7IyCmhq3nmjlZMu9Y_iNnlh-rMhc3CwedIoF5WxsP94eEACyL5U2SGtx9xPenjw1NxSpKTHdoa7Juz2o6uSwSKqAxkT5Y3a6bM4SGhThbQU8s7Tj0DPWBLZXOOLt-VAce-Vp8aoA5aQ4aXl4aDlLWGCE4BatHWBq-x81W_xwSQGTs8lkCGqgpTyj2tvSH8dLmgNhIbaEvcqO95TSb7C859ZH2VzAl7nRtqUSJi9G7VLXAyxqP2uDK_FZ-mahn9VuUv5Cug%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=117&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_f0324ea8&cb=1677773163326&jobListingId=1008498463752&cpc=F4333377EDC1BC7E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-8bd193741395d463--6NYlbfkN0BqFYcnGQtlgZUyEPNOpiDdgWIzo4J8ITPECTVQq8Qp8SwtdbyDLTpdHE3O3nFgKGPtfU1gGRlvlfpq4j86vorBgGfyn-DI3zF2HaAyox6sfDlCh096rqzsCyrDcQBO0sQDs0wTRaqNLohvnnIt60pMBjX2feQmaBqCqshT_-fFvEGxyTBd6jsG_DjvjPLjva6XjuLhNKhQLpnJaGWnChmrRGiLwUWZ2KvT3pi9_m6LBhTcQ7uaEKNp3_9nJjeqYQLHyxKsaRYxj_htEuWGsuGIJVE7o2nKn4cko4e7waX1bpRr42yCCRK1ZA6MDeWebS-qhcF3UXSdK4R_xVKQwY6N8ZcivEEPsk8e_8FZ0e4n-KnKlb7ZTEny2Mg-OJSt086CAdhhSWVlpqoZWshEakARn3DDHK9r_mTrCJGaiPKuSMp3N8OIQcHr1Gr4OQnkjde6lmi9TeoptihsoB-fgrJTyYF8CO7stkr5c63Z_wwrLyDsOr9CQq5QQbrt9EyLj5HFVHOfF8aNLgp-1PQRxlFF_jk-6QA5mbtw6R28FKQZhIvPP57pdV4m8YBcdztVT5pYS38t0Mo6FuCpUn_BjECU76V7eWrucQG4vGRkoA0z-9FLmXxDvxGfTCfnUPB1TelUfybHICPhM7a4pRhbsfRY"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=118&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_82586894&cb=1677773163326&jobListingId=1008497580253&cpc=9FFE37255B2C047E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-38d0267d221b03c3--6NYlbfkN0Du8Z4xGK47Pzy3p_hgGWYj-jLWqXmzLa3DvggOPyMWHRfgeZQODajqpgAKoMNSv3x0zmfsb4T9Cw2JmPdjL-cV21GG3tjcXEebOQssQy_1UjjpFIHfvdeTLHmtDFICFH8l8ul-7CdVtEga4wrlZFqdk9nTxq60F9tqbZZ13v1c80B0QFDnlyLYAoO1_vxkmn8XD_mRAdPF32VzRqhJ2HJlLiU7ssYClMg4C-6EzgjZ7xgNKKeVUoJIjSpzLZM7akNunioMPFvip1X_FLdH1Ss36Mln0ELDvEmXLIvIhzdPdoPYgLQVaJZycmw6--2Is3XI2k0DtrnQ_5xXYzEOOyf3NPZxVPoJ3tlCT9qGNk6NbJBxtj-GQuTFuvavvOBhI1QM8ib4BM5ZTl4cSCgohaeLuYwCFVPFBeoVcp4zYz3DUHa-1AxmeFwHwiSzO9_a5HuDYIBSdZ_21DbKVz000BJ8jDmUYMTyGucUEseWTx6JT8a8KC28-oqdcbGtZ9ySzkoVl-JE1vVBdjLaOijscJ-Zep2X_vztsYs-AAcB-3yaOvfPUSpSqRebT6owM805J1bnTHIoZwrCWYjKZZA6bMeK-5tbpGoqnySAPH_Ah8ZZyVNxyKkKAHQfSDQIeohXaK8DhnTOEfIVk2MeIIUJPj7nJA6LSgLlYqFxGnM4peoF2LTqGc5ZTTu9AIRXi0v9jJDI3uMAhlLvk3MYhaZh4ZSn0ecHWHcVNEcROPIXfoeQ4aHsRFj1S_X4nCf48iaJJapULoDLraeV4g%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=119&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_04c7b420&cb=1677773163327&jobListingId=1008493058883&cpc=E1C07D31E98CBB16&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-9d1d6439180012da--6NYlbfkN0BjrLiXh33nVJS5N8YfV80V89pLwIJlhdsTBpkWxGqF6TVdpRsKk_rL1yhHmUWzeX8Ke4wvCPmk1YQibMWfzEMMAgjwdm61MO7ERk0aaxhJUcWe_iX-iD-lg49A8SaVBuUissrcFXo1OhzxCRZAfSO8Od05MOrIpkhWM0w3Z9tPBXEtwxjs0--TXMnxwYoEm8nQ5Z6x8iQel6syYaKyLTFb-voDIUpt0qn4mS8LoqzBZN2FpvYemJz8U6t6riZGLM-OHi9ttAq06H_OEBCOGGTq-dZZ4GzaXMlWPHYuu_yyLgAhn5_1lcNjf_1sT8FcOnXv4eUuYcM4e-dYey2JZOLJYrgGhCQY5jCtHMWYzKCrpejl17BcOE2JSXDmgOojdSilw_XcWKXIJ1zs-kCiPP4aFEsTV7nAL9eqx4C4cRpF4-5DyEDD0lCf4aqMe8rAnEVF6sX3s7qNTBX1tdZQaqaYjUHsLsodXNlKDC9EhXNf91th1eW_RM94-rFmx8zeeU7NwZExKh1bNcyePU72bhBAyDL4qbgzRRnlQG8wlPcZzOIfzsrbnT4Gyjc7ipA9b-KmJnr75oe2s4-bodE1rGtoJ0cxnhxNRM7Qmyxgj0LTpA%3D%3D"
+          },
+          {
+            "count": 1,
+            "value": "https://www.glassdoor.it/partner/jobListing.htm?pos=120&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_79f56587&cb=1677773163327&jobListingId=1008459392909&cpc=61B26E8FEFFA679F&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-d08d7ea111e83967--6NYlbfkN0Cqd2ZSbh1yl-cLWaiBCytk7lRtNNoI745m33aNnxuvR9j-F8tvQ_sOG0J98hY4bJbw0NKgCZlDUKCbWudExk3nF8PK8EoSOZyp34ti_fviICj4gZG_GIrocrLxfbtoNC5559Vnpf3fEzeGi8rZn2OHNiZvX__wGgcIhD8kKqyurXZ-Fz68C8b72rWcE0EEbmIIsb9xAorcrqmxWyQFYqZiPWm1iTt259Dr8MJxBA81Tay-ew7z55ch8PB1X9u57TJtJ27zHsT4ujUQwYIj_7oH67B8kNeQu91Z2ZQuGyaX2vdQnZPIpP1vA908PHqHWo87rxivQsqDVUIPM17vtRB5VWqXN8eto52gk0TvbhzPw97IQKzoEAtI2ssxZhwLPxHWre-dOI6hsxsMCAg0e85tZEOTP-94Wdpd1S4ubfcVUe0JftFwx-n4BTfcSR1W2v-JUsHm3zc7yt-_4D-Pfl-az5ydGNoks4np_exFWucLeRMeUAsLau2uA1yrJh7W_7fUM8OWeV7vaI-NBLZPhyym6MOV9uv-8LpL4sHxNZmoMddKqtdA5KAFezCGnEOQwX8oPsRzsXC78sP2Yu5kjh9aF29CcNTgRqjVFhDcC7UDg5goSw9k3AEG4OHEEHx7m3IbBsVD-7CjiboGMXUlrSs2"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=101&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_c0bdfc20&cb=1677773163325&jobListingId=1008500360715&cpc=7F406056C5176881&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-828f185c22878721--6NYlbfkN0A8zZLCnFz4bHVPrYm7WniGy57McBVsRCsPeRASLFxRLHgrv3DhLO4uQizMASh4yY1YtZdvJFNwFqtgSLTq1K3h1VGt-s6R7c9GxVdfwO3UVPZ778PltEXLHcLCKW6tcP6lgxZI0MHTiAimIWZaJlnwfN5H6wdK9OpvjUMbOE8kjIOV7b94ej-oRoN8P68WRKHvzlQ8xMfn1LKVEpTZQbeDfxisdPZ9x5uj_MpgMMwWiT5Ywe-7DgJQDKW-DP8qnumD5zozJYi4NlhyopoKseb3fYzMvS5BQm17inlrQ-oRGUsewff4u5qMQZ4g4elOdW5T5CXShsHJBsBkpvSKkxALCeGstKQWrXwlJUUjwegQW4fvx0kfO1oJBDE3pAv5PRXEKWUIhktLKrrV6Ap5DramtlFJHBuuwWpPRPC81uSg0faTViTEzfMs7KJ2A5pj9FyWKogpOiyHLa0d5JyeHw1KihjwM0tN12odhMqddzhOe1EfxRAj3hxMRIwvchCqbfUQGWJWtEyfwVYwNPw7ZzGfXk96ZlHeEosAIZRcof9RaGi7zgW3_FT5PSGA-1s2qT0u3-Aa_SWa1g%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=102&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_2d3da3ee&cb=1677773163324&jobListingId=1008461916045&cpc=2BD45BF6CF113D42&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-ecc4db44fd6592a5--6NYlbfkN0C8QiHF-VpbPGOg0smOOQqVwrKdDq7DnZCh7Jza0x9Ez_d9Ah7m-TUJ1tMyW2Nvnfg9NUcCvfaYsb3wZnzIE1pRsTnKUhj4HhftQoWhSrURXGQA-EC89YBtgnZAJqfwNLXGkNv5s03HYVZAFUGFeKzHWccoNX_kuDd97hlDmnn5oSJMknoCfSQn7EtAzOfa30r6TEibHPg7s9T09p_5cPCrw92CCVEy6xc_nS7E5TiV1jtd8OjZV_gtttDSGuCx-kqDRsSacfHRCyLBHdlZWTitSRx7hmJajXDIHSSPoFi9pi1ci3A1cjIIaXHnWB7VWxuA5MjlqrxUBF9JWnHmMWgq-9M91JZrpo_qv93IzR4PTdosBFHRrFJQcfwudycWL1ksRqY4sDPVlLpg25_xRHn2wKbisYdbwoj0CX-ux4OD7GcGU12iD_bWwxjBSq3bfmBOgDpeW5EXBUaj3o-NMCk0Yri6axWpoSwUUIo6DaFcndd45MKV1dJoIbr3hHaU_8Akkx8DhAGNO1QymJrULQPSjULrWnWF0EjCqzIwv8bA6bGMDj1hi6TVDKXQxoUBx-uJ-eqaMoJBJ05D3fqTyIvsRyHGah6Gj-47wwg-6JHUD-Vw6kqSYpVQ",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=103&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_8f2846f4&cb=1677773163325&jobListingId=1008126673535&cpc=BFF9BE5BDD8EF644&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-3b99b2c0bcca88a1--6NYlbfkN0ADNS7S_bk_QaI_CrwlsrYCPwIxhEPqbKfSwismzAhKFhAO0N3pd-3m-Hhb25tIbeIHmeXnRr8l1RDbIDgAz_e5fBNowGT9DWL55aVj5KkrZPQZ9oc--tEO1Rj0XFkgyGJzoBVBRxY92ds8RBAl0KnlADDlqO3cCsh4ErEP73jX4DNe2hLmbK1N9YKL7Stbzr2_Gj-UwcCxv-ULtNYb8smWQtV9uHL2kvlv5bwiFkiolHxsovlo0_muAJSgpLI34rcBI60LBnLBLMLiT8YpqqZc8P4iT4SFUS_iCkAdDf_LEJppf8pIK4tl9twDTmbx6WsM13VKcj3ADJ_WL-Ra1XlP39MirbrP40RuGBXZmJHNTzz2KTs1eIjhELvPpo_b6hUrubbzNtWbuFvpL8LBa2vPck7zkWeY-8QvmmPIM_94taREA58nChIDjkDU0AJU4yYCXAR_JbUuH6dgwy-B2Z_ENzIv0PSuv_PWNFog4e9-yoMQIZdPEMc1UvUuznfFXqe8L907bAjRDgeBqpn4BOCVhNwBwHQ7eARMjwgx1jGXdZo5W4J478NLbBBiZpkyghWxssvixH2sznIV-JHp0JlCdbJid3A8IWqbsJLko8Yg6RDtBtzRobfAoi6qwvfd3qExPYTkzNQGR6w1JLHsEbxQI4ZF8I_opj2Vtz7JfIQ6d1f14Zgyusm7",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=104&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_c63528fe&cb=1677773163325&jobListingId=1008458692778&cpc=4A43B94DDEA77FFA&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-30b8437e75e27be0--6NYlbfkN0Bp-rZfZF3PCE-ZW-EKgdmu0IFY3DGErQESS7shdDIG5H7cMJG4KHhzpznkNwdHifaoLaEwCybJ1traCy2Zfc6YasEH-0MdU5w4iCRWd52HubwvnHcFYAaU4iAhP9VYxlksUXBxS7PwmQkBLmLeFdxFTkpe-4Xw7OkOppkhVS3xWIGPu_EfwtBsV74DNXlNZegRKQMrFGAw6hl1NJigXspubr-k4yNzFsA-PjnLEdxjv0oc6TIIbXjXrkiRVYbnbUQRoiIo6wtVoJnqpk9KbErxRpwBV6-iBVIEvWX0hVLdHYYOnqMkvL9zKzUQ0zXJdZL_Mv8EFASjsX3pflMhxai3Ac6THHUa_Ow6FsA7PdL2yJyq5Pnwtee-19HquAB-EzcOHPHW5s-bgu9L3bVDGmrIaamOtF5Le-jWi2DCAWzpFvFN2-OTl52Ql4ppuIIXAjWEFu2yJnTRiqaNcZoRpQGVubW4V0uHS6Jstc_F4FvfBx_cnP32-IXla28Bjpw5ObJGjo3RLA5GheXJSCPmhTwVhBj1c9BQtIyMt__Iw5kSszs0CGMw9klFhC20IAg2zUQG7obcdWfyT6UbyXhv3B9RBQtGPZXYKzgqg1ou6gdJDhOnr-fz6v1Basl3fT8zSAocTC5Sld0DdA%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=105&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_0ce431f1&cb=1677773163325&jobListingId=1008504227841&cpc=B27F49C9D64D6F84&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-ba68e2a2dfe69da0--6NYlbfkN0DAv-knXWXtWP4BSZ5vXP1CKdoDUf5S6mXEs2UdONmIWlVd8a84ouEntKZlEKwwLXMap74mXn22f3CrvRUQLezoIGjF7mJiLxuDhN2nfPChQDVBk1YCd3V1AImxaIMgdkOb84EdA4NOYQVdCc-GyE9D_ShuvLqRmrIlPV6-0iV-JtOFDKJ9nhpE7lY3-heg46hrjwCREgSiQubB27B0Cht8iSevjyPQE9ZHUdEE-Lbx8YDHFkmiyD7R_n3imbsIiQD4vxLzlSyu7CozYifnrGGGWEJZU2ZSSz0p3Ec8frwuObe48Zn7RdBdRVLGxJj_89VL5qRo5oZnAoTlq-7OotRrB05Y8wuw0qlnjUKAIPE56ZHIJpPuk-O3NaKySjTrTcwJoG8zBVZwCrAsrnR8qVN3B6iMUI1t_Zu_X_XX7XXR0jjtT2mxsVqzn-SrP3KQgVAbwbrD9OWsz-J16gPE9YTl6XRdOL1JdjdueB-u6Hzb_APH3SU9c0rJByZds48H5qxN-ttVaKtNoIBMe3gGW7cbe0ZQS4d1h7t4v7uIIzRfKAGbtJkbMpERYmnpWpfBGfmcE_1NnH3KDUw3Oslffd4LObL0LsfoVlVp1wVw-aEQavpmVS4Q4P6FV0YRB05B5eU%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=106&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_6a989184&cb=1677773163325&jobListingId=1008113524129&cpc=E509DD49A6927373&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-c79c6dfe4327dfbc--6NYlbfkN0AC9MSsTIhcv6PmN65MnPo_6iLm1aJGusVi9wrBfe0C4WprYur0KV_5gZUgxQmpKgqX930_WVcnLE_QY-tcYx9SCb3AF627B0Sj55x7uhQGJuV_usniJ9eiIsBmtFj9CMoVlbxijNBxPsJfIakH9x0kOKBSRHC1r2n69BWnduKFg0Pu024lF3iN2wXJ9mpV8Eja_aK85atEDtatWZaI8a0Yq-0OFWpLaat2lzfuQZ7NXPulKPz1cQ7d4FM5Lpxd061S9rjqG_K5K6g6OuKBX0ptvrdZ_Q-hHMYrhQwZGTz67Lv4T579MAJ0ZHLzRdv8ZaXipYwzqAeysp4xvUd4_WP8M77iwhqcUWItXEet2Z_ecIaNREqP6kbzluKVxlZKWx7d4MPmDJqbfyIINIjVGq4iOu1Oy_F3p23Ml9zKbXm88_yO1s9mZ2GDyVA2WPZStIRKiSEnP4PDW1-01vgR_41b_Hyz_CKvC9w2R6MU2NlGALHPl_CkUP_PKrl9F4ozlm8Fy5i0bZ7NQklFHaYMoU2VEXcQYk1yjNNcMnR2eHhFIbHyJJmONt7i-72KYWLbzRyFAd2gwY6eKzCbQhjSwqbR-rZWGQloZNo%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=107&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_4da1e758&cb=1677773163325&jobListingId=1008439827981&cpc=009A9C8147DF705D&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-85dcd48569191942--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz8pEuTT-zx4oAb6xJhTEd69HDae6pZt4hxqT4I0egwEZPTm84FymVg_YLiaDcMAM0WHy-t4c7IOy07niU6Alq1yVA_JB4j-o5bniIspSvUmXu48qgVBtZ7vAdy107ZeRi2BOA2EWLF3ytDnlswrqAoJqvq4JPNmsefxz7QGKztinOdsq74d-2cepmP7GszEqtr-1ef-bZuxm9WITi7YiFcGN_i00ptRbcY39VugoJ6ewrTJTl7adDqBhhOhaIoE6fa8Oe-XjZXcE4xamC5ja9xgjIIGrTHS-lDJXnF4UckBt2gL5e_Hp6AJESolYzwv0aUKcJFtd4iCcU2z6690YvyqciKjD65txGqw2RiJIE0uHQ_sK-W4hX4POL9wJSKmRVHPt5J-g4NU0AtRp_wnUerfV1c6i7OrGTo2LJ2PYF20IVfTbjYCDztGAnvC5GYxe8sZW4J6rViDSV4UL4lB0j-HWgPatsCkkE328fnJ1AWclwFVK-EgcErkA-5D6uf_yudg_h6FPKYIkHdqIw6lWFurHyfmgiVymM0HFGsSpq2NKFjPrfJfCZB",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=108&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_1e54753a&cb=1677773163325&jobListingId=1008423732098&cpc=21001CD36CB5FE0E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-22cf2b64485359aa--6NYlbfkN0C0_pO5fwfA11ptQjlM-eoUyFF-RuimpG5Su7y4ibtR0s8fcfwGh8I2fvWkZlg-gOGVDICZRNf4iIotfulB5VOZCUSM1_9tXNe_FZy30M_f7s1WvP6RCMsyc3EsyEHa40TWCYKC1wCGo-Xm40YDTW1Ij9rmGO70xq42aFA5N3aSnDB7t7AK1aH-t4wxzDjm39euboRHEyWCFjhSOVnPTnIC7oDq8N1s3Ox8dlsKp0YBjcBNjk5be3elSzo8mlWRLt8VIex2buS7FPFl8ateHPR1xvxjn2nsiPUaO_fwfkrPgF-PuuCwukAZb8c8Szs09bTPQPJbzidmAaxaTkR8vUwEKXkTphhfo_WU-pQcyJet5K2GkYxtyD8987HSzw_WuDZLeidMgrStQpnFJ1kUwmQbniRpYbltwe6IseX0GrHfYbb7ESA0cp6p8lw9s2Lg-Tw3lIIR8D4DJYaWq8s_4GXb4JFo4Lzbgh9Z1AxyFTaM82yaWjhTV1CZqT7D5POUg9ziCR8K4iJCkf1a93lJsgLa9h-L4aIMQPYwnKFa68orA35GiQrRo5VWuLKNLwh1mR4PS2eSuUigrmS4GOMjB3x3-n9nFfdV_0Q%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=109&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_c1c6582b&cb=1677773163325&jobListingId=1008484471573&cpc=022796DF6CE1C9E6&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-9c679442ad160d27--6NYlbfkN0BMmVSGRmNpA0YEhBnXnr9Ec-FDNOXP9eUozoMEMWrS46TVeTbeXF9DZg4hBNaOa5JdmIhj-ShrIdKuUn7OMK6u35XsBh6WK9UC2T_7AOeuKBTnAZpeBZBrTXWHfa3ORnADZvvZkMnEj_NCqbIP50xvSQL7mq4ca3Dw38yosnBOl-DHCK2qu5J6RqO5c2tC7mET6I8iyzvtyOy8ifRd4C5lkAwWvNiKxgTHgduqFDA5knW8m-r1nLkBbe2v7_MY_DqiOm0W8-5cG0zM1f98Zlg3QH0vMccuurx0yUWpYH5gS17I6j6vn5AilsezpZmzZRfXwxo12x6D4tM7qwOGFVqt2HsXiT81VrchZbd2GV4p4AE8zvNCPPaRaR5Go_KYQeaDqE3pprcT8mDBHPGwlbNTu8P065crfByydE-0Fkjpafp3tWcfZsNUBYGmUu6BnvbtzUCaqgKRmWR3fxgM5TXKMSt-HE2pZhyayGwkjfUfH5h_DExEeIbBweM5MpqOWciheEsSEVstxtZtXanM79-wOdcALFNebnoGL2uAsifU66ERPAgnkfJuUafY-FUkeIC0b2z24lqa_su1pFQaALrwLV7aiknOJJzpYqlxQtges2ivOSlRSqfmDLgL0O8-7Kq8tcCFlxBdBA%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=110&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_daaba409&cb=1677773163325&jobListingId=1007243344510&cpc=E6B95A06C1BC174B&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-1026fd492a16775b--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz2Mm_nTByEclbhMbXDir2bUdFwx_x8fYVYj766ChpBf4mya8_IUc8RA6hwLKUWFEWxCnmzwJiY9F8P5nu-W4pt8EuJKQijRya0ULCFuvo7PFThliZgfdALmvUmxcveoj4S0tPrDJ__ezSCYLMV8lYNQ5PG-o2CWUAneIaJQ0l1CfZ3BfB9sQBUaX4N4TlIxTTpQ4rspBxSfw6JTMi3MNGkGazJQfsYDPf2TeoUP0tKCYka4PqJmLka0eD2L8rZ6MnrSrle9EjOuikiHN2mGc8Y59MjHZ8jqVY6mrwyOO62wBObrJ3NTUlhW9We6_nKqi4Of8gfUUgY3ae_XtiuIXbKOtYKjGI5HxSMn6eh6RJL85h6Dha-e8oAAVsdmvghewKNb1B2UeETj-ssdXUp_o3OatFqUosQS8YZD178JMsvn6rGYIaR85JhvuYRE66KLVloWSqn4SX68IelI8oZbZMVQLiFHe0qY8ihTXk5SvZtXDLKjQa1avFZqOZJsgWiPjuiXUk2zPcgvcGmTfWo0iafPh9n1-QdO7qHQJGlN-9RozEu0A8WiTZb",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=111&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_da0c6358&cb=1677773163326&jobListingId=1008500373995&cpc=5C70DC7FEE0D01B1&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-2c3e232ef9d6566b--6NYlbfkN0A8zZLCnFz4bHVPrYm7WniGy57McBVsRCsPeRASLFxRLHgrv3DhLO4uefwcTGcMVZqGLRQnMMmp-fREl-5hZPuGE1qmunn-Tl8sE3hwxAh2WJ4v79p0HTC1X045gYDFyhiEbUJLkaa5rCb8xUEcfHqhAGzFBbRe2PwzjFNFzZxCbED-FwmpYyqIGmp8_r6o3yJSGKmM5VyEYfplOfRnUyVXisVOlRvUID7xxQmamIDldjaeFGgDSpzXZkbheTH1wu3xoE1Vua-Ss77H91-f8AcHuBpWTt6maAtO8-H0kgduxPFqYwHYfnWuJuLBRQjc8hU4W9wW4peHEUqy1QSw58yGI23ANXJcnvHhD2uqTucQGCkmDr7aoX-oyJsHqVuBux-oJ8UHLmWHMJUdjkYkvrNgttVCJ0o_9A302ujgk3IMd6_rO5hyXWaotuR5NONKGLZrQFdLck0Wzf23eG577ypuEw1JVyKPdgz9iVU1YDvIMtHbneX-rChvf63E6720wcAWPKoP5XWPkWbRs2Zd3vWoNaeVBwqh9YCXFgAkRwQQAAnXGoWc-9ISU510yMC9RoL4n_qndtriMw%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=112&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_1ac11462&cb=1677773163326&jobListingId=1008446555860&cpc=E04C949A9101C6A2&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-89601602b8b75507--6NYlbfkN0DBH-sv6Gy7PCakfSsP1TxCRndZR3GCgrt14eTu6xUDZIDIy9zq91-EfIYhp1NWjOrODxaX_hBNcFYpXovjWebgaFhjfARcNVSAluaMJPTVMzE7jm5brRwCkfKdfrjaBfjAYceF29nRf75xywepAs06ypR-P0-zhmLbZmfvyhWVc9px8aXSjjEdsBojD7ABYNXqXRWMH6z0gvFFRc7ioNHqsfXIeytzBguG2q-1neAVlwFYD3w8PJ8YgfJvmegkuhcu7ifgsH8qNHcvrYzdbVzO8scnExfOO6mtJLzTGyXYlqQU1s1Gf2aca7h_ClYR4eUPcHTsHJBkEg_rQwz61AnOjECbxqIJPZcEdoTj8PdHruhqbdN3cH7UuVUu6zo2mQJC6_VJUHs_is0eEitnS4IrUuv1TJycxK-CH88NO2EckbhL8Rj0xUVuU1ThrpAlNB3h3vCg_NpZ0_A_a_ynUUs7jhL3M15coQhhxDur2RaKGBKn4m05uzNLB5IbQqbrubWe5XW8Yrskz9mFSt1Bg6Od0aWn7HfPRjoQxLyBjakOWc022d9KTuhqW69kgTWxmYE%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=113&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_595175ba&cb=1677773163326&jobListingId=1008376794907&cpc=EE7F0D06914A6BE7&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-6fb3ebac12bf19ef--6NYlbfkN0CAifU3EaP-5lPQwwWr6ePw8NDlBdExlfKMA8e5TseVQJUKpNI0GniBZjprQTwo3KzqMOGlPp2sBfYSZgxN6zcwjPs37b-4JOlOmeyo0buZO3hQ8HWWdy7FOgkT1xuveBEgrVc8HVOC0IN7G8j0lSbR3qz0PHr6T6kz0rrtVc7PfIjaRPMxEhK71tSnc2Qfps39WVXcUJqqpjNpGMRztQc-tcys3513_qBXVLtSUX983erVhtWnXyM1EU8UjXkzGKk-N7eVWT5IYNvjKZNmlYQgFWti0BiYNzEBbdCOKHe5CfRb_odFsMeZxchy2htudIOIrqVrmWxOy-x6_gMfiQi8L2Il9F-WgNdLSjSOcgbLHSWAACBpdUel7bEX38bulUWnFwYEazl2Rq22lWmj6DqRs8WCT5mOLgjWnjQWVBlB9dUQFwfcltMoS8vKkrVOgWa-wJFjZxOEP6SK4Zf0EQrr85xoIxu9E89Mw4POxs05Kw9F8OTfnddRJLa-ZUW5yKsGUwx3CGnhEYtveObUO9K7CJSfLhouW3E4yZRBQpMeDe9U4EPih3Vysw0xlbSXbjn0zuxjQdz5wRnxe8ARNQgh",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=114&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_9ed0ba33&cb=1677773163326&jobListingId=1008151500873&cpc=F0881FB4B112A732&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-36e6199e4309bd94--6NYlbfkN0A26axkHWDAEqorEBafURBxTlj_DeaXqTx68C6FuVLLZI91l25ryG55dPh6ieBNiudhINRY_acxi9me5SmYzd5gilnoc231tjACRS3l8YvzB2OiLubACcSMGo4lZoLXpp2ey2aWWP6t3QxzOQRu4Qp8h_XxkmirlXA5DBwqmSnrCfEATEhIh97iwL6qDvFQuhCDISgFDMxH0y1qT6SvKExAKlUJFg59aOx3HAOgqreE4HYSJOlAa2qKhYt2DvRRMhuBxgMSmZuOAZ3XBHq8Vl4XTEqCUXF2MRVShuH_ff4k92LLZB_dYwyQThV0AS0Jad-q2eJ7evFVZqgDzWSa92TVfAmqjDtgKN7V5pbvk843QgbqO3MzbBnt35kTlsd_OGJxtFSgE9v5dz4zk5c4-ZscKgYK53norc9ic5ljZmQANeTpoNEDaawC2yr9I9tuf_dKI2T_PgAuolQ5t9cR4nC-TLa_Ulg33K0r9F7PZoGj43iqeaEUHtdq7VihbKauWZuTEO056PIaB9b2qMtt-tegaTUqQC6l15MUwJ6g-LHecO6Gb1eP01lrNgVuw32tojaNWLBjgAnOqnF-xcS1VHsAVbBc3MzTlt78T75xIoAi3_xitGBkb0RAdRZIS_JV4GQVFfBxPtPHajThPf7tw__ojBlM6cUfmHQQp5Lmf2vtWwlpRc_f8KcNTN_USYR-KpO54PTzsmIKVLC3aERaqfpFEBfWpacOO2ksJy5O2pLesovzbU-d3qJyId6Q006YItyMmV89WgAl1YjQyfsdiKs5cRCSwhZtltQq_qNsiyP8xuzdT_Bo6ohjJUgnObHoEk32rZlZ75F4vYDbqulcv3tubIAtFdcydOhKnVt8EQ_cU8Ni-YuPZobi0dM-cqbIeor4_kMc1_P4v4av3Hbp4z5DEn6VlVn2NmPNZjp0-pv3F3nil8YnBxnK9Lbo2ojFm_kna3F4NZCwfQ%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=115&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_d3e19ea9&cb=1677773163326&jobListingId=1007243344715&cpc=AA718BBA0476CE1A&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-fb8f3c30251653a8--6NYlbfkN0Bz6Vm0KKZgK3IGyqtYIgq3B3aSN1YYDISHIR3HLJ50iQM1f8FF86k3eNG5riA4MSz2Mm_nTByEct4PE9wYElGOQ6YXjP9hGB6m-dKLcfGiA6FJe3ttVg6LW83491ufnDB8tWYasBE0ce-efzTfR1MqMQApFI0Y-U63UYZFUTYJKUoJvj_1ukHirOKda8ZvQk6zIS6IrGdnCaxX3holxT8z4nVn3rytizsZM96YXfBCPpX3GSQ_mmraT-7o-grS-5Ha_MPilQwfTq7OnnWpAPKwe1WJCpjFCQdX6JesJqn5C2trMke-1wvSL7lE9oJBVuvhXoBf7V2poxGWKPqgCpU-daZG6P1H1thC1bBZ_VO9ituSI7DrM2CpbmUnR6RwOpJxVmfqYPaRYydP0Ygij49KQDnf-wYVcBcVJy3xIxDeVlmlRV1wcpSfS8tgNKM7eWcaeTC47jmgx95qwnzsNovRIx_YoCLvzMaQVOoP4rdQP0vgmk7VrWsca0fop3gjlQjKNJlnyWR61aLoCXjlfTBahU1zhxWl4d0SD5UrLZSjX-Dj9iW0gj2uPBTIKFeTgiPlY2fXBJTUmZ4_i9wx1-gaVGilii-G-SxgmVcRp1vFBPCjDFDiMWUg",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=116&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_e1d3267e&cb=1677773163326&jobListingId=1008490950026&cpc=9C4F014304452074&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-e25a268ef5e894b5--6NYlbfkN0BnrGlSDnen0QF3oGdbTpIwpSTLOTcqkZZKInyhNwmcgRgKoaoztMcZg4wOo4tMM4-_jXQKbS28apv3ugQ65RVGW6X4UWYBZ_0oj9Ln3t3sgk8dACT2RVfbRcH787qiqqOT1_v1JYiPdRZcGX6m2h0uAi_K5X6gRNHEip33zTa2R4zPJZIWi5erwaiIGYc-KWdnoITCvXe3ZkQibOr3VkhwoE5ZVKsggFNspqnVZQgoNv2I6Z8Y0g4jMmUdAn8vfkuGRKMlj_4r5vxwrirA7IOuAs_ccqFqL-aHU3Egh9hjN4FtJ2JKWBDugrR8wleNT7PaMQ92evDBjCtwmPUXw2f0NsJy4T1eNoceL8vKblSfYWrL39O1xdpT6a3Ku1vTUGKKOjjBM5VoF7Bkt3oSk4vffSpIJ5TqTZLwcspK7IyCmhq3nmjlZMu9Y_iNnlh-rMhc3CwedIoF5WxsP94eEACyL5U2SGtx9xPenjw1NxSpKTHdoa7Juz2o6uSwSKqAxkT5Y3a6bM4SGhThbQU8s7Tj0DPWBLZXOOLt-VAce-Vp8aoA5aQ4aXl4aDlLWGCE4BatHWBq-x81W_xwSQGTs8lkCGqgpTyj2tvSH8dLmgNhIbaEvcqO95TSb7C859ZH2VzAl7nRtqUSJi9G7VLXAyxqP2uDK_FZ-mahn9VuUv5Cug%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=117&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_f0324ea8&cb=1677773163326&jobListingId=1008498463752&cpc=F4333377EDC1BC7E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-8bd193741395d463--6NYlbfkN0BqFYcnGQtlgZUyEPNOpiDdgWIzo4J8ITPECTVQq8Qp8SwtdbyDLTpdHE3O3nFgKGPtfU1gGRlvlfpq4j86vorBgGfyn-DI3zF2HaAyox6sfDlCh096rqzsCyrDcQBO0sQDs0wTRaqNLohvnnIt60pMBjX2feQmaBqCqshT_-fFvEGxyTBd6jsG_DjvjPLjva6XjuLhNKhQLpnJaGWnChmrRGiLwUWZ2KvT3pi9_m6LBhTcQ7uaEKNp3_9nJjeqYQLHyxKsaRYxj_htEuWGsuGIJVE7o2nKn4cko4e7waX1bpRr42yCCRK1ZA6MDeWebS-qhcF3UXSdK4R_xVKQwY6N8ZcivEEPsk8e_8FZ0e4n-KnKlb7ZTEny2Mg-OJSt086CAdhhSWVlpqoZWshEakARn3DDHK9r_mTrCJGaiPKuSMp3N8OIQcHr1Gr4OQnkjde6lmi9TeoptihsoB-fgrJTyYF8CO7stkr5c63Z_wwrLyDsOr9CQq5QQbrt9EyLj5HFVHOfF8aNLgp-1PQRxlFF_jk-6QA5mbtw6R28FKQZhIvPP57pdV4m8YBcdztVT5pYS38t0Mo6FuCpUn_BjECU76V7eWrucQG4vGRkoA0z-9FLmXxDvxGfTCfnUPB1TelUfybHICPhM7a4pRhbsfRY",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=118&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&cs=1_82586894&cb=1677773163326&jobListingId=1008497580253&cpc=9FFE37255B2C047E&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-38d0267d221b03c3--6NYlbfkN0Du8Z4xGK47Pzy3p_hgGWYj-jLWqXmzLa3DvggOPyMWHRfgeZQODajqpgAKoMNSv3x0zmfsb4T9Cw2JmPdjL-cV21GG3tjcXEebOQssQy_1UjjpFIHfvdeTLHmtDFICFH8l8ul-7CdVtEga4wrlZFqdk9nTxq60F9tqbZZ13v1c80B0QFDnlyLYAoO1_vxkmn8XD_mRAdPF32VzRqhJ2HJlLiU7ssYClMg4C-6EzgjZ7xgNKKeVUoJIjSpzLZM7akNunioMPFvip1X_FLdH1Ss36Mln0ELDvEmXLIvIhzdPdoPYgLQVaJZycmw6--2Is3XI2k0DtrnQ_5xXYzEOOyf3NPZxVPoJ3tlCT9qGNk6NbJBxtj-GQuTFuvavvOBhI1QM8ib4BM5ZTl4cSCgohaeLuYwCFVPFBeoVcp4zYz3DUHa-1AxmeFwHwiSzO9_a5HuDYIBSdZ_21DbKVz000BJ8jDmUYMTyGucUEseWTx6JT8a8KC28-oqdcbGtZ9ySzkoVl-JE1vVBdjLaOijscJ-Zep2X_vztsYs-AAcB-3yaOvfPUSpSqRebT6owM805J1bnTHIoZwrCWYjKZZA6bMeK-5tbpGoqnySAPH_Ah8ZZyVNxyKkKAHQfSDQIeohXaK8DhnTOEfIVk2MeIIUJPj7nJA6LSgLlYqFxGnM4peoF2LTqGc5ZTTu9AIRXi0v9jJDI3uMAhlLvk3MYhaZh4ZSn0ecHWHcVNEcROPIXfoeQ4aHsRFj1S_X4nCf48iaJJapULoDLraeV4g%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=119&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_04c7b420&cb=1677773163327&jobListingId=1008493058883&cpc=E1C07D31E98CBB16&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-9d1d6439180012da--6NYlbfkN0BjrLiXh33nVJS5N8YfV80V89pLwIJlhdsTBpkWxGqF6TVdpRsKk_rL1yhHmUWzeX8Ke4wvCPmk1YQibMWfzEMMAgjwdm61MO7ERk0aaxhJUcWe_iX-iD-lg49A8SaVBuUissrcFXo1OhzxCRZAfSO8Od05MOrIpkhWM0w3Z9tPBXEtwxjs0--TXMnxwYoEm8nQ5Z6x8iQel6syYaKyLTFb-voDIUpt0qn4mS8LoqzBZN2FpvYemJz8U6t6riZGLM-OHi9ttAq06H_OEBCOGGTq-dZZ4GzaXMlWPHYuu_yyLgAhn5_1lcNjf_1sT8FcOnXv4eUuYcM4e-dYey2JZOLJYrgGhCQY5jCtHMWYzKCrpejl17BcOE2JSXDmgOojdSilw_XcWKXIJ1zs-kCiPP4aFEsTV7nAL9eqx4C4cRpF4-5DyEDD0lCf4aqMe8rAnEVF6sX3s7qNTBX1tdZQaqaYjUHsLsodXNlKDC9EhXNf91th1eW_RM94-rFmx8zeeU7NwZExKh1bNcyePU72bhBAyDL4qbgzRRnlQG8wlPcZzOIfzsrbnT4Gyjc7ipA9b-KmJnr75oe2s4-bodE1rGtoJ0cxnhxNRM7Qmyxgj0LTpA%3D%3D",
+          "https://www.glassdoor.it/partner/jobListing.htm?pos=120&ao=1110586&s=58&guid=00000186a312c893972535f8e06dfdb7&src=GD_JOB_AD&t=SR&vt=w&ea=1&cs=1_79f56587&cb=1677773163327&jobListingId=1008459392909&cpc=61B26E8FEFFA679F&jrtk=3-0-1gqhh5i5rgfql801-1gqhh5i6jg2ou800-d08d7ea111e83967--6NYlbfkN0Cqd2ZSbh1yl-cLWaiBCytk7lRtNNoI745m33aNnxuvR9j-F8tvQ_sOG0J98hY4bJbw0NKgCZlDUKCbWudExk3nF8PK8EoSOZyp34ti_fviICj4gZG_GIrocrLxfbtoNC5559Vnpf3fEzeGi8rZn2OHNiZvX__wGgcIhD8kKqyurXZ-Fz68C8b72rWcE0EEbmIIsb9xAorcrqmxWyQFYqZiPWm1iTt259Dr8MJxBA81Tay-ew7z55ch8PB1X9u57TJtJ27zHsT4ujUQwYIj_7oH67B8kNeQu91Z2ZQuGyaX2vdQnZPIpP1vA908PHqHWo87rxivQsqDVUIPM17vtRB5VWqXN8eto52gk0TvbhzPw97IQKzoEAtI2ssxZhwLPxHWre-dOI6hsxsMCAg0e85tZEOTP-94Wdpd1S4ubfcVUe0JftFwx-n4BTfcSR1W2v-JUsHm3zc7yt-_4D-Pfl-az5ydGNoks4np_exFWucLeRMeUAsLau2uA1yrJh7W_7fUM8OWeV7vaI-NBLZPhyym6MOV9uv-8LpL4sHxNZmoMddKqtdA5KAFezCGnEOQwX8oPsRzsXC78sP2Yu5kjh9aF29CcNTgRqjVFhDcC7UDg5goSw9k3AEG4OHEEHx7m3IbBsVD-7CjiboGMXUlrSs2"
+        ],
+        "unexpected_count": 450,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "oppurtunita_carriera"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "oppurtunita_carriera",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "oppurtunita_carriera",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "oppurtunita_carriera",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "stipendio_e_benefit"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "stipendio_e_benefit",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "stipendio_e_benefit",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "stipendio_e_benefit",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "cultura_e_valori"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "cultura_e_valori",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "cultura_e_valori",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "cultura_e_valori",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dirigenti_senior"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dirigenti_senior",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dirigenti_senior",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dirigenti_senior",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "equilibrio_lavoro_vita_privata"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "equilibrio_lavoro_vita_privata",
+          "type_list": [
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "equilibrio_lavoro_vita_privata",
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "equilibrio_lavoro_vita_privata",
+          "max_value": 5.0,
+          "min_value": 0.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "sede_centrale"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "sede_centrale",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dimensioni"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dimensioni",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "dimensioni",
+          "value_set": [
+            "Oltre 10.000 dipendenti",
+            "Da 201 a 500 dipendenti",
+            "Da 51 a 200 dipendenti",
+            "Sconosciuto",
+            "Da 1 a 50 dipendenti",
+            "Da 501 a 1.000 dipendenti",
+            "Da 1.001 a 5.000 dipendenti",
+            "Da 5.001 a 10.000 dipendenti"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "Non_disponibile"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          127,
+          230
+        ],
+        "partial_unexpected_list": [
+          "Non_disponibile",
+          "Non_disponibile"
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 22.22222222222222,
+        "unexpected_percent_nonmissing": 22.22222222222222,
+        "unexpected_percent_total": 0.4444444444444444
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "tipo"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "tipo",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "tipo",
+          "mostly": 0.8,
+          "value_set": [
+            "Azienda - Settore privato",
+            "Azienda quotata in borsa"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "Non_disponibile"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          127,
+          230
+        ],
+        "partial_unexpected_list": [
+          "Non_disponibile",
+          "Non_disponibile"
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 22.22222222222222,
+        "unexpected_percent_nonmissing": 22.22222222222222,
+        "unexpected_percent_total": 0.4444444444444444
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "entrate"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "entrate",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "entrate",
+          "value_set": [
+            "Pi\u00f9 di $ 10 miliardi (USD)",
+            "$ 1 - $ 5 miliardi (USD)",
+            "Sconosciuto/Non applicabile",
+            "$ 100 - $ 500 milioni (USD)",
+            "$ 5 - $ 25 milioni (USD)",
+            "Meno di $ 1 milione (USD)",
+            "$ 25 - $ 100 milioni (USD)"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "$ 5 - $ 10 miliardi (USD)"
+          },
+          {
+            "count": 2,
+            "value": "Non_disponibile"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          14,
+          127,
+          230,
+          366
+        ],
+        "partial_unexpected_list": [
+          "$ 5 - $ 10 miliardi (USD)",
+          "Non_disponibile",
+          "Non_disponibile",
+          "$ 5 - $ 10 miliardi (USD)"
+        ],
+        "unexpected_count": 4,
+        "unexpected_percent": 44.44444444444444,
+        "unexpected_percent_nonmissing": 44.44444444444444,
+        "unexpected_percent_total": 0.8888888888888888
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "fondata_nel"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "fondata_nel",
+          "type_list": [
+            "int"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "fondata_nel",
+          "regex": "[0-9]{4}"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 0
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "unexpected_count": 445,
+        "unexpected_percent": 98.88888888888889,
+        "unexpected_percent_nonmissing": 98.88888888888889,
+        "unexpected_percent_total": 98.88888888888889
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "fondata_nel",
+          "min_value": 1000
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "settore"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "settore",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "segmento"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 441,
+        "unexpected_percent": 98.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "segmento",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 441,
+        "missing_percent": 98.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "scraping_date"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "scraping_date",
+          "type_list": [
+            "str"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_strftime_format",
+        "kwargs": {
+          "batch_id": "7887d0883a8a229b88c80fba8e4f2cd7",
+          "column": "scraping_date",
+          "strftime_format": "%Y-%m-%d"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 450,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 60,
+    "success_percent": 65.0,
+    "successful_expectations": 39,
+    "unsuccessful_expectations": 21
+  },
+  "success": false
+}
