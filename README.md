@@ -1,14 +1,14 @@
 # Thesis - Data-Quality
 
-## Create virtual environment with docker
+### Step 1 - Build dell'immagine
+E' possibile creare ambiente su cui utilizzare il progetto di Data Quality:
+sarà necessario buildare l'immagine dal prompt dei comandi con il codice: ``` docker build -t thesis . ``` 
 
-### build image from Dockerfile
- docker build -t thesis .
+### Step 2 - Attivazione del contaneir
+Una volta completato il primo step sarò possibile avere immagine del nome ```Thesis```, per utilizzarla digitare una dei due seguenti comandi:
+1. ```docker run --rm -d -p 9000:8888 -p 4041:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v ${PWD}:/home/jovyan/ --name container_thesis thesis ```
 
-### from image to container
-docker run --rm -d -p 9000:8888 -p 4041:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v ${PWD}:/home/jovyan/ --name container_thesis thesis  
-
-docker run --rm -d -p 9000:8888 -p 4040:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v %cd%:/home/jovyan/ --name container_thesis thesis
+2. ```docker run --rm -d -p 9000:8888 -p 4040:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v %cd%:/home/jovyan/ --name container_thesis thesis```
 
 
 ### localhost
