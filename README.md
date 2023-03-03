@@ -1,5 +1,16 @@
 # Thesis - Data-Quality
 
+Il progetto è diviso in due parti:
+- Data Ingestion
+- Data Quality
+
+![image](https://user-images.githubusercontent.com/58252186/222507141-706b9436-6407-4ebb-8e78-b1fc70e53a51.png)
+
+
+## Set up dell'ambiente
+
+L'ambiente descritto è utilizzabile solo per il processo di qualità.
+
 ### Step 1 - Build dell'immagine
 E' possibile creare ambiente su cui utilizzare il progetto di Data Quality:
 sarà necessario buildare l'immagine dal prompt dei comandi con il codice: ``` docker build -t thesis . ``` 
@@ -15,6 +26,4 @@ Se tutti gli step sono stati completati nel modo giusto sarà possibile accedere
 La password settata è 'DQ2022'
 
 
-Data Ingestion Workflow
 
-![image](https://user-images.githubusercontent.com/58252186/222507141-706b9436-6407-4ebb-8e78-b1fc70e53a51.png)
