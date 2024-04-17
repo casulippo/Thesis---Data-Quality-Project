@@ -22,7 +22,7 @@ L'ambiente descritto è utilizzabile solo per il processo di qualità.
 E' possibile creare ambiente su cui utilizzare il progetto di Data Quality:
 sarà necessario buildare l'immagine dal prompt dei comandi con il codice: ``` docker build -t thesis . ``` 
 
-### Step 2 - Attivazione del contaneir
+### Step 2 - Attivazione del container
 Una volta completato il primo step sarò possibile avere immagine del nome ```Thesis```, per utilizzarla digitare una dei due seguenti comandi:
 1. ```docker run --rm -d -p 9000:8888 -p 4041:4040 -e DOCKER_STACKS_JUPYTER_CMD=nbclassic --user root -e GRANT_SUDO=yes  -v ${PWD}:/home/jovyan/ --name container_thesis thesis ```
 
